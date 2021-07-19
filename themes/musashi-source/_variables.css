@@ -1,0 +1,60 @@
+.theme-light {
+	/* logo */
+		--logo-primary: var(--theme-accent);
+		--focus-primary: var(--theme-accent);
+	/* blurple & hover */
+		--brand-experiment: var(--theme-accent);
+		--brand-experiment-560: var(--theme-accent-brighter);
+	/* Text colors */
+		--header-primary: #000000;
+		--header-secondary: var(--theme-accent);
+		--text-normal: #000000;
+		--text-muted: #999999;
+	/* Hyperlink color */
+		--text-link: #AB5EBA;
+		--channels-default: #000000;
+		--interactive-normal: var(--theme-accent-text);
+		--interactive-hover: #000000;
+		--interactive-active: var(--theme-accent-superdark);
+		--interactive-muted: #999999;
+	/* Text background color */
+		--background-primary: #fafafa;
+	/* Channel background */
+		--background-secondary: #ffffff;
+		--background-secondary-alt: #ffffff;
+	/* Discord top bar and channel background */
+		--background-tertiary: #ffffff;
+	/* theme color accents */
+		--theme-accent: #7B5C81;
+		--theme-accent-brighter: #8E6A95;
+		--theme-accent-text: #664C6B;
+		--theme-accent-superdark: #432749;
+		--theme-accent-superbright: #AA80B3;
+	/* Right click menu */
+		--background-floating: #fff;
+		--background-mobile-primary: #fbfbfb;
+		--background-mobile-secondary: #e0e0e0;
+	/* Channel hover */
+		--background-modifier-hover: #FDF9F5;
+		--background-modifier-active: var(--background-modifier-accent);
+	/* Selected channel */
+		--background-modifier-selected: var(--background-modifier-accent);
+		--background-modifier-accent: #FBF1EA;
+		/* mentioned */
+		--background-mentioned: var(--background-modifier-accent);
+		--background-mentioned-hover: rgba(60,60,255,0.1);
+	/* Message hover color */
+		--background-message-hover: transparent;
+	/* elevation shadows */
+		--elevation-stroke: 0 0 0 1px rgba(6,6,7,0.08);
+		--elevation-low: 0 1px 0 rgba(6,6,7,0.1),0 1.5px 0 rgba(6,6,7,0.025),0 2px 0 rgba(6,6,7,0.025);
+		--elevation-medium: 0 4px 4px rgba(0,0,0,0.08);
+		--elevation-high: 0 8px 16px rgba(0,0,0,0.16);
+		--guild-header-text-shadow: var(--elevation-high);
+	/* Message box */
+		--channeltextarea-background: #ffffff;
+		--activity-card-background: #c7c7c7;
+		--textbox-markdown-syntax: var(--theme-accent-superbright);
+	/* spotify color */
+		--spotify-accent: var(--theme-accent-brighter);
+	}

@@ -1,0 +1,376 @@
+@import "variables";
+
+///	theme by saturn.
+///	margin tweaks from nicerdiscord.		
+
+/// Color
+	// popout color changes 
+		// heading text recolor 
+			.base-1x0h_U.muted-3-7c5L { 
+				color: var(--theme-accent-text); 
+			}
+		// spotify disabled button recolor 
+			.theme-light .lookFilled-1Gx00P.colorGrey-2DXtkV:disabled {
+				background-color: var(--background-modifier-accent);
+				color: var(--text-muted);
+			}
+			.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV:disabled {
+				background-color: var(--background-modifier-accent);
+				color: var(--text-muted);
+			}
+		// spotify allowed button recolor 
+			.theme-light .lookFilled-1Gx00P.colorGrey-2DXtkV {
+				background-color: var(--theme-accent);
+				transition: background-color 0.1s ease-in-out;
+			}
+			.theme-light .lookFilled-1Gx00P.colorGrey-2DXtkV:hover {
+				background-color: var(--theme-accent-brighter);
+				transition: background-color 0.1s ease-in-out;
+			}
+			.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV {
+				background-color: var(--theme-accent);
+				transition: background-color 0.1s ease-in-out;
+			}
+			.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV:hover {
+				background-color: var(--theme-accent-brighter);
+				transition: background-color 0.1s ease-in-out;
+			}
+		// spotify playing bar recolor 
+			.theme-light .newPopoutActivityStyles .barInner-3NDaY_ { background-color: var(--theme-accent); }
+			.theme-dark .newPopoutActivityStyles .barInner-3NDaY_ { 
+				background-color: var(--theme-accent); 
+			}
+	// search color changes 
+		// search placeholder text  
+			.search-2oPWTC .DraftEditor-root .public-DraftEditorPlaceholder-root {
+				color: var(--theme-accent-text)
+			}
+		// magnifying glass and delete icons 
+			.clear-1pMieT .icon-3cZ1F_ {
+				color: var(--theme-accent-text)
+			}
+			.icon-3cZ1F_ {
+				color: var(--theme-accent-text)
+			}
+		// message containers 
+			.container-1r6BKw, .container-1r6BKw {
+				color: var(--theme-accent-text);
+			}
+			.search-2oPWTC {
+				color: var(--theme-accent-text);
+			}
+		// filter color
+			.theme-light .searchAnswer-3Dz2-q, .theme-light .searchFilter-2ESiM3 {
+				background-color: var(--theme-accent-superbright);
+			}
+			.theme-dark .searchAnswer-3Dz2-q, .theme-dark .searchFilter-2ESiM3 {
+				background-color: var(--theme-accent-superbright);
+			}
+	// text color fixes 
+		.activityText-yGKsKm {
+			color: var(--theme-accent-text)
+		}
+		.activity-2Gy-9S {
+			color: var(--theme-accent-text);
+		}
+		.bsi-clientStatuses {
+			color: var(--theme-accent-text);
+		}
+		.colorDefault-2K3EoJ {
+			color: var(--text-normal);
+		}
+		// ?????? 
+			.content-3QAtGj {
+				color: var(--text-normal);
+			}
+	// small sidebar when mentioned 
+		.mentioned-xhSam7:before {
+			background-color: var(--background-modifier-accent);
+		}
+	// spotify color fix 
+		.theme-light:root {
+			--spotify-color: var(--spotify-accent) !important;
+		}
+	// make titlebar white 
+		.container-1r6BKw.themed-ANHk51 {
+			background: var(--background-secondary);
+		}
+		.children-19S4PO:after {
+			display: none;
+		}
+	// reply/mention tweaks (i think)
+		:root {
+			--border-length: 3px;
+			--left-margin: -7px;
+			--mentioned-border: #513D55;
+			--mentioned-bg: var(--background-mentioned);
+			--mentioned-bg-hover: var(--background-mentioned-hover);
+			--replying-border: #2f55df;
+			--replying-bg: rgba(114, 137, 218, 0.05);
+			--replying-bg-hover: rgba(35, 75, 223, 0.815);
+	// unread banner pill tweaks
+			.unread-1xRYoj {
+				background-color: var(--theme-accent);
+				width: 300px;
+				margin-left: -40px;
+				margin-right: 0px;
+				opacity: 1;
+			}
+	// reactions tweaks 
+		.reactionInner-15NvIl {
+			background-color: var(--background-modifier-hover);
+			border-radius: 10px;
+		}
+		.reactionInner-15NvIl[aria-pressed="true"] {
+			background-color: var(--background-modifier-accent);
+			border-radius: 10px;
+		}
+	// reply stuff that i don't understand
+		#app-mount .replying-1x3H0T {
+			background: transparent;
+		}
+		#app-mount .replying-1x3H0T::before {
+			content: none;
+		}
+/// Shadows 
+	// main chat 
+		// main chat window drop shadow 
+			.chatContent-a9vAAp {
+				box-shadow: inset var(--elevation-medium);
+				transition: box-shadow 0.2s ease-in-out;
+			}
+		// usernames in chat 
+			.username-1A8OIy {
+				//text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
+				text-shadow: var(--elevation-medium);
+				filter: brightness(0.9);
+				-webkit-text-stroke-width: 0px;
+				-webkit-text-stroke-color: var(--theme-accent-text);
+			}
+		// main message bar drop shadow 
+			.scrollableContainer-2NUZem {
+				box-shadow: var(--elevation-medium);
+				transition: box-shadow 0.2s ease-in-out;
+			}
+			.scrollableContainer-2NUZem:hover {
+				box-shadow: var(--elevation-high);
+			}
+			.scrollableContainer-2NUZem:focus-within {
+				box-shadow: var(--elevation-high);
+			}
+		// reply bar drop shadow 
+			.attachedBars-tZDmyV {
+				box-shadow:var(--elevation-medium);
+			}
+	// shadow on own pfp 
+	.container-3baos1 {
+		box-shadow: var(--elevation-medium);
+		border-radius: 25px;
+	}
+	// removes broken drop shadow on chat pfps 
+	.mask-1l8v16 {
+		box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
+	}
+	// popout pfp shadow 
+		.mask-1l8v16 {
+			box-shadow: var(--elevation-medium);
+		}
+	// embed tweaks 
+		.embedWrapper-lXpS3L {
+			box-shadow: var(--elevation-medium);
+		}
+	// code block tweaks 
+		code {
+			box-shadow: inset var(--elevation-medium);
+		}
+/// Size/shape tweaks 
+	// nitro banner fix 
+		.bannerPremium-2hSAwz {
+			height: 120px;
+		}
+	// popout transition tweak 
+		.full-motion .translate-2dAEQ6.animatorRight-3i_YPs {
+			transform: translate3d(0px,-10px,0);
+			-webkit-transform: translate3d(0px,-10px,0);
+			transition: 0.2s ease-in-out;
+		}
+		.full-motion .translate-2dAEQ6.animatorLeft-1EQxU0 {
+			transform: translate3d(0px,-10px,0);
+			-webkit-transform: translate3d(0px,-10px,0);
+			transition: 0.2s ease-in-out;
+		}
+	// viewing older messages bar 
+		.jumpToPresentBar-G1R9s6 {
+			width: auto;
+			left: auto;
+		}
+	// settings remove side margin 
+		.contentColumn-2hrIYH, .customColumn-Rb6toI {
+			max-width: unset;
+		}
+		.sidebarRegion-VFTUkN {
+			flex: 0 0 auto;
+		}
+	// settings sidebar spacing 
+		.sidebar-CFHs9e {
+			padding-top: 10px;
+			padding-left: 0px;
+		}
+	// unread channel pill 
+		.unread-2lAfLh {
+			background: var(--theme-accent);
+			height: 32px;
+			width: 6px;
+			top: 5px;
+			left: 2px;
+		}
+	// server icons tweaks 
+		.circleButtonBase-2DCxIZ {
+			border-radius: 40px;
+			filter: grayscale(100%);
+		}
+		.listItem-GuPuDH {
+			border-radius: 40px;
+			box-shadow: var(--elevation-high);
+		}
+		.folder-1hbNCn {
+			border-radius: 40px;
+		}
+	// channel tweaks 
+		// private messages 
+			.layout-2DM8Md {
+				border-radius: 5px;
+				width: 220px;
+			}
+			.selected-aXhQR6 .layout-2DM8Md {
+				box-shadow: var(--elevation-low);
+			}
+		// channels 
+			.content-1x5b-n {
+				border-radius: 5px;
+				color: var(--theme-accent);
+				width: 235px;
+			}
+			.modeSelected-346R90 .content-1x5b-n {
+				box-shadow: var(--elevation-low);
+			}
+	// new messages bar 
+		.newMessagesBar-265mhP {
+			width: auto;
+			left: auto;
+			right: -8px;
+			background-color: var(--theme-accent);
+		}
+	// server icon in inbox 
+		.icon-3o6xvg {
+			left: 10px;
+		}
+	// collapse button in inbox 
+		.collapseButton-2ZsEjz {
+			left: 5px;
+			margin-right: 20px;
+		}
+	// search bar transition
+		.searchBar-3dMhjb {
+			width: 320px;
+			transition: width 0.1s ease-in-out;
+			background-color: var(--background-modifier-accent);
+			height: 25px;
+			color: var(--text-normal)
+		}
+/// Hidden elements 
+	// hide small server separator bar 
+		.guildSeparator-33mFX6 {
+			display: none;
+		}
+	// hide help button 
+		.iconWrapper-2OrFZ1[aria-label="Help"]>.icon-22AiRD {
+			display: none;
+		}
+	// hide file button 
+	.attachWrapper-2TRKBi{
+		display: none;
+	}
+	// hide gift button 
+		.buttons-3JBrkn>[aria-label]{
+			display:none;
+		}
+	// hide weird bar on the side of the message bar 
+		.form-2fGMdU::before {
+			display: none;
+		}
+	// messages scroll bar 
+		.scroller-2LSbBU::-webkit-scrollbar {
+			display: none;
+			overflow: hidden;
+		}
+	// server channel scroll bar 
+		.scroller-RmtA4e::-webkit-scrollbar {
+			display: none;
+			overflow: hidden;
+		}
+	// direct messages list scroll bar 
+		.thin-1ybCId::-webkit-scrollbar {
+			display: none;
+			overflow: hidden;
+		}
+	// hide set server nick in popout
+		.setIdentityLink-1t8Ahd {
+			display: none;
+		}
+	// hide stage discovery/nitro channel in dms
+		#private-channels-2 {
+			display: none;
+		}
+		#private-channels-1 {
+			display: none;
+		}
+	// hide browse public servers 
+		.scroller-1Bvpku > .listItem-GuPuDH:nth-last-child(2) {display: none;}
+	// hide spotify logo 
+	.spotifyIcon-2J9kSv path {
+		display: none;
+	}
+/// search bar/inbox tweaks that i didn't want to split up
+	.container-2j2llN {
+		box-shadow: var(--elevation-medium);
+		border-radius: 10px;
+		color: var(--theme-accent-text);
+	}
+	.searchResult-9tQ1uo {
+		box-shadow: var(--elevation-medium);
+		border-radius: 10px;
+	}
+	.messages-3G3erD {
+		box-shadow: var(--elevation-medium);
+		border-radius: 10px;
+		top: 10px;
+	}
+	.container-enaOkj {
+		color: var(--background-primary);
+		background-color: var(--background-primary);
+	}
+	.messageGroupWrapper-o-Zw7G {
+		box-shadow: var(--elevation-medium);
+		right: 4px;
+	}
+	.header-2-Imhb {
+		min-height: 50px;
+		margin-bottom: 5px;
+	}
+	.channelHeader-3Gd2xq {
+		height: 50px;
+		top: 5px;
+		width: auto;
+		border-radius: 10px;
+		margin-bottom: 10px;
+		box-shadow: var(--elevation-medium);
+	}
+}
+/// unused	
+	/*
+	// messages pfp shadow 
+		.avatar-1BDn8e {
+			box-shadow: var(--elevation-low);
+		}
+	*/
