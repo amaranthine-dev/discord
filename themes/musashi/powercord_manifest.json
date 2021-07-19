@@ -1,0 +1,9 @@
+{
+    "name": "original theme :)",
+    "description": "a currently light mode only theme with small tweaks outside of color",
+    "version": "0.1",
+    "author": "saturn",
+    "theme": "/css/main.css",
+    "consent": "false",
+    "license": "MIT"
+}
