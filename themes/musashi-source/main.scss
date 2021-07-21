@@ -1,8 +1,14 @@
-@import "variables";
-
+@import "variables.scss";
 ///	theme by saturn.		
 
-/// Color
+/// root changes
+	:root {
+		--font-display: var(--font-primary);
+		// reply/mention tweaks (i think)
+			--border-length: 3px;
+			--left-margin: -7px;
+	}
+/// Color ==================================================
 	// popout color changes 
 		// heading text recolor 
 			.base-1x0h_U.muted-3-7c5L { 
@@ -82,6 +88,15 @@
 			.content-3QAtGj {
 				color: var(--text-normal);
 			}
+		// settings sidebar text fix 
+		.side-8zPYf6 .item-PXvHYJ {
+			color: var(--text-normal)
+		}
+		// channel category 
+		.container-2ax-kl {
+			color: var(--text-secondary);
+			font-weight: bold;
+		}
 	// small sidebar when mentioned 
 		.mentioned-xhSam7:before {
 			background-color: var(--background-modifier-accent);
@@ -97,16 +112,6 @@
 		.children-19S4PO:after {
 			display: none;
 		}
-	// reply/mention tweaks (i think)
-		:root {
-			--border-length: 3px;
-			--left-margin: -7px;
-			--mentioned-border: #513D55;
-			--mentioned-bg: var(--background-mentioned);
-			--mentioned-bg-hover: var(--background-mentioned-hover);
-			--replying-border: #2f55df;
-			--replying-bg: rgba(114, 137, 218, 0.05);
-			--replying-bg-hover: rgba(35, 75, 223, 0.815);
 	// unread banner pill tweaks
 			.unread-1xRYoj {
 				background-color: var(--theme-accent);
@@ -114,6 +119,14 @@
 				margin-left: -40px;
 				margin-right: 0px;
 				opacity: 1;
+			}
+	// server select/unread pill recolor
+			.item-2hkk8m {
+				background-color: var(--theme-accent);
+			}
+	// viewing older messages 
+			.jumpToPresentBar-G1R9s6 {
+				background: var(--theme-accent);
 			}
 	// reactions tweaks 
 		.reactionInner-15NvIl {
@@ -131,7 +144,29 @@
 		#app-mount .replying-1x3H0T::before {
 			content: none;
 		}
-/// Shadows 
+	// powerbottom toggle switch color fix
+		.icon-3Gkjwa {
+			filter: grayscale(100%);
+		}
+		.icon-3Gkjwa:hover {
+			filter: grayscale(0%);
+		}
+	// theme selected 
+		.item-26Dhrx[aria-checked="true"] {
+			color: var(--theme-accent-superdark);
+		}
+	// switch recolor 
+		.container-3auIfb {
+			background-color: var(--theme-accent);
+		}
+	// discord icon perm color 
+		.childWrapper-anI2G9 {
+			background-image: linear-gradient(to bottom, #EEC19E,#D1A296,#B98A91,#A0758C,#7B5C81); 
+		}
+		.homeIcon-FuNwkv {
+			color: var(--background-modifier-hover);
+		}
+/// Shadows ==================================================
 	// main chat 
 		// main chat window drop shadow 
 			.chatContent-a9vAAp {
@@ -141,48 +176,61 @@
 		// usernames in chat 
 			.username-1A8OIy {
 				//text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
-				text-shadow: var(--elevation-medium);
-				filter: brightness(0.9);
+				text-shadow: var(--elevation-stroke);
+				filter: brightness(0.85);
 				-webkit-text-stroke-width: 0px;
 				-webkit-text-stroke-color: var(--theme-accent-text);
 			}
 		// main message bar drop shadow 
 			.scrollableContainer-2NUZem {
-				box-shadow: var(--elevation-medium);
+				box-shadow: var(--elevation-low), var(--elevation-stroke);
 				transition: box-shadow 0.2s ease-in-out;
 			}
 			.scrollableContainer-2NUZem:hover {
-				box-shadow: var(--elevation-high);
+				box-shadow: var(--elevation-medium), var(--elevation-stroke);
 			}
 			.scrollableContainer-2NUZem:focus-within {
-				box-shadow: var(--elevation-high);
+				box-shadow: var(--elevation-medium), var(--elevation-stroke);
 			}
 		// reply bar drop shadow 
 			.attachedBars-tZDmyV {
 				box-shadow:var(--elevation-medium);
 			}
+		// small message options container
+			.wrapper-2aW0bm {
+				box-shadow: var(--elevation-low), var(--elevation-stroke);
+			}
 	// shadow on own pfp 
-	.container-3baos1 {
-		box-shadow: var(--elevation-medium);
-		border-radius: 25px;
-	}
+		.container-3baos1 {
+			box-shadow: var(--elevation-low), var(--elevation-stroke);
+			border-radius: 25px;
+			margin: 5px;
+		}
 	// removes broken drop shadow on chat pfps 
-	.mask-1l8v16 {
-		box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
-	}
+		.mask-1l8v16 {
+			box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
+		}
 	// popout pfp shadow 
 		.mask-1l8v16 {
 			box-shadow: var(--elevation-medium);
 		}
 	// embed tweaks 
 		.embedWrapper-lXpS3L {
-			box-shadow: var(--elevation-medium);
+			box-shadow: var(--elevation-low), var(--elevation-stroke);
 		}
 	// code block tweaks 
 		code {
-			box-shadow: inset var(--elevation-medium);
+			box-shadow: inset var(--elevation-low), var(--elevation-stroke);
 		}
-/// Size/shape tweaks 
+	// picture in picture shadow
+		.pictureInPictureVideo-2iKsGg {
+			box-shadow: var(--elevation-high);
+		}
+	// discord icon shadow
+		//#guildsnav___home {
+
+		//}
+/// Size/shape tweaks ==================================================	
 	// nitro banner fix 
 		.bannerPremium-2hSAwz {
 			height: 120px;
@@ -218,22 +266,48 @@
 	// unread channel pill 
 		.unread-2lAfLh {
 			background: var(--theme-accent);
-			height: 32px;
+			height: 34px;
 			width: 6px;
-			top: 5px;
-			left: 2px;
+			top: 4px;
+			left: 0px;
+			border-radius: 0px;
+			z-index: 10;
+			position:absolute;
+			margin-top: -5px;
+			margin-bottom: -28px;
 		}
 	// server icons tweaks 
 		.circleButtonBase-2DCxIZ {
-			border-radius: 40px;
+			border-radius: 20px;
 			filter: grayscale(100%);
 		}
+		.icon-27yU2q {
+			border-radius: 16px;
+		}
 		.listItem-GuPuDH {
-			border-radius: 40px;
+			border-radius: 12px;
+			box-shadow: var(--elevation-medium), var(--elevation-stroke);
+		}
+		.listItem-GuPuDH selected {
 			box-shadow: var(--elevation-high);
 		}
 		.folder-1hbNCn {
-			border-radius: 40px;
+			border-radius: 20px;
+		}
+		// set server list to correct height
+		.tree-2wKJdG {
+			width: 72px;
+		}
+		.childWrapper-anI2G9 {
+			border-radius: 16px;
+		}
+		// hide unseleceted cicle mask
+		.svg-1X37T1 > mask {
+			display: none;
+		}
+		// make icon rounded
+		.icon-27yU2q {
+			border-radius: 16px;
 		}
 	// channel tweaks 
 		// private messages 
@@ -242,16 +316,23 @@
 				width: 220px;
 			}
 			.selected-aXhQR6 .layout-2DM8Md {
-				box-shadow: var(--elevation-low);
+				box-shadow: var(--elevation-stroke);
 			}
 		// channels 
 			.content-1x5b-n {
-				border-radius: 5px;
+				border-radius: 0px;
 				color: var(--theme-accent);
-				width: 235px;
+				width: 240px;
+				left: -8px;
+				height: 34px;
+				margin-top: -2px;
 			}
 			.modeSelected-346R90 .content-1x5b-n {
-				box-shadow: var(--elevation-low);
+				box-shadow: var(--elevation-stroke);
+				height: 34px;
+			}
+			.mainContent-2h-GEV > .name-3l27Hl {
+				font-weight: bold;
 			}
 	// new messages bar 
 		.newMessagesBar-265mhP {
@@ -275,21 +356,35 @@
 			transition: width 0.1s ease-in-out;
 			background-color: var(--background-modifier-accent);
 			height: 25px;
-			color: var(--text-normal)
+			color: var(--text-normal);
 		}
-/// Hidden elements 
+	// right click submenu margin fix
+		.submenuContainer-2gbm7M {
+			left: -8px;
+		}
+		#message-add-reaction, #message-item-0-0-1, #user-context-invite-to-server, #user-context-roles {
+			left: 8px;
+		}
+/// Hidden elements ==================================================
+	// hide titlebar
+		//.titleBar-AC4pGV {
+		//	display: none;
+		//}
 	// hide small server separator bar 
 		.guildSeparator-33mFX6 {
 			display: none;
 		}
+		.scroller-1Bvpku > .listItem-GuPuDH {
+			display: none;
+		} 
 	// hide help button 
 		.iconWrapper-2OrFZ1[aria-label="Help"]>.icon-22AiRD {
 			display: none;
 		}
 	// hide file button 
-	.attachWrapper-2TRKBi{
-		display: none;
-	}
+		.attachWrapper-2TRKBi{
+			display: none;
+		}
 	// hide gift button 
 		.buttons-3JBrkn>[aria-label]{
 			display:none;
@@ -313,6 +408,9 @@
 			display: none;
 			overflow: hidden;
 		}
+		.peopleList-3c4jOR::-webkit-scrollbar {
+			display: none;
+		}
 	// hide set server nick in popout
 		.setIdentityLink-1t8Ahd {
 			display: none;
@@ -327,10 +425,10 @@
 	// hide browse public servers 
 		.scroller-1Bvpku > .listItem-GuPuDH:nth-last-child(2) {display: none;}
 	// hide spotify logo 
-	.spotifyIcon-2J9kSv path {
-		display: none;
-	}
-/// search bar/inbox tweaks that i didn't want to split up
+		.spotifyIcon-2J9kSv path {
+			display: none;
+		}
+/// search bar/inbox stuff ==================================================
 	.container-2j2llN {
 		box-shadow: var(--elevation-medium);
 		border-radius: 10px;
@@ -365,11 +463,14 @@
 		margin-bottom: 10px;
 		box-shadow: var(--elevation-medium);
 	}
-}
-/// unused	
-	/*
+/// unused	==================================================
+/*
 	// messages pfp shadow 
 		.avatar-1BDn8e {
 			box-shadow: var(--elevation-low);
 		}
-	*/
+	// make server folder non transparent
+		.folderIconWrapper-1_bOZe {
+			background-color: transparentize(.3);
+		}
+*/
