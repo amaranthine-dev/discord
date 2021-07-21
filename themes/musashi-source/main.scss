@@ -491,4 +491,23 @@
 		.folderIconWrapper-1_bOZe {
 			background-color: transparentize(.3);
 		}
+	// hide status mask
+		.avatar-1BDn8e foreignObject {
+			border-radius: 12px;
+		}
+		.pointerEvents-2zdfdO {
+			rect {
+				mask: url(https://github.com/saturnian-code/discord/blob/a82d296a084bafcf42c32f7b14bb05ba64864e1f/themes/mutual-assets/12px-mask.svg);
+			}
+		}
+		.mask-1l8v16.svg-2V3M55 {
+			rect {
+				mask: url(https://github.com/saturnian-code/discord/blob/a82d296a084bafcf42c32f7b14bb05ba64864e1f/themes/mutual-assets/12px-mask.svg);
+			}
+		}
+		.mask-1l8v16.svg-2V3M55 foreignObject {
+			rect { 
+				mask: url(https://github.com/saturnian-code/discord/blob/a82d296a084bafcf42c32f7b14bb05ba64864e1f/themes/mutual-assets/12px-mask.svg)
+			}
+		}
 */
