@@ -7,6 +7,7 @@
 		// reply/mention tweaks (i think)
 			--border-length: 3px;
 			--left-margin: -7px;
+		
 	}
 /// Color ==================================================
 	// popout color changes 
@@ -444,27 +445,6 @@
 	// hide spotify logo 
 		.spotifyIcon-2J9kSv path {
 			display: none;
-		}
-	// hide bsi chat status mask
-		.avatar-1BDn8e foreignObject {
-			border-radius: 12px;
-			mask: none;
-		}
-		.pointerEvents-2zdfdO {
-			mask: none;
-		}
-		.mask-1l8v16.svg-2V3M55 foreignObject {
-			mask: none;
-			border-radius: 12px;
-		}
-		.mask-1l8v16.svg-2V3M55 {
-			rect {
-				width: 12px;
-				height: 12px;
-				x: 28;
-				y: 28;
-				
-			}
 		}
 /// search bar/inbox stuff ==================================================
 	.container-2j2llN {
