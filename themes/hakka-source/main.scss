@@ -8,7 +8,11 @@
 		--font-code: var(--font-primary);
 		letter-spacing: -0.35px;
 		word-spacing: -4px;
-		line-height: 14px ;
+		line-height: 16px;
+	}
+	.markup-2BOw-j {
+		line-height: 20px !important;
+		top: 2px;
 	}
 	.markup-2BOw-j code.inline {
 		font-family: "JetBrains Mono" !important;
@@ -26,13 +30,20 @@
 	}
 	.slateTextArea-1Mkdgw {
 		font-size: 18px;
-		bottom: 4px;
+		top: 3px;
 	}
 	.placeholder-37qJjk {
 		font-size: 18px;
 	}
 	.placeholder-37qJjk[aria-hidden=true] {
-		content: 'write a messsage...';
+		content: 'write a message...';
+	}
+	.bodyTitle-1ySSKn, .aboutMeTitle-1IYtPE {
+		font-size: 14px;
+	}
+	.customStatusText-1vtUsN {
+		font-size: 14px !important;
+		font-weight: 500;
 	}
 	.aboutMeBody-3GuvKk {
 		font-size: 14px !important;
@@ -50,6 +61,15 @@
 	.aboutMeBody-3GuvKk.markup-2BOw-j.clamped-IwJfxR {
 		font-size: 12px;
 	}
+	// aka names
+		.base-PmTxvP {
+			font-size: 14px;
+			font-style: italic;
+		}
+		.nicknames-1XK4Zt {
+			font-size: 14px;
+			font-style: italic;
+		}
 /// Color ==================================================
 	// popout color changes 
 		// heading text recolor 
@@ -203,7 +223,8 @@
 		}
 	// reply stuff that i don't understand
 		#app-mount .replying-1x3H0T {
-			background: transparent;
+			background: var(--theme-accent-highlight);
+			height: auto;
 		}
 		#app-mount .replying-1x3H0T::before {
 			content: none;
@@ -262,6 +283,7 @@
 	// typing indicator recolor
 		.base-gE7OpD {
 			color: var(--text-secondary);
+			font-weight: bold;
 		}
 	// new pins indicator
 		.iconBadge-qZ4Ksk {
@@ -277,6 +299,44 @@
 	// titlebar icons
 		.iconWrapper-2OrFZ1 {
 			color: var(--theme-accent);
+		}
+	// role remove color on border
+		.role-2irmRk {
+			border-color: var(--theme-accent) !important;
+			border: 1px solid;
+			font-size: 14px;
+			color: var(--text-normal);
+		}
+	// friends list fix background 
+		.peopleColumn-29fq28 {
+			background-color: var(--background-primary);
+		}
+		.peopleListItem-2nzedh {
+			border-top: 0px solid var(--background-modifier-accent);
+			height: 48px !important;
+		}
+	// emoji complete
+		.autocomplete-1vrmpx {
+			background-color: var(--background-primary) !important;
+		}
+		.selected-1Tbx07 {
+			background-color: var(--theme-accent-highlight) !important;
+		}
+		.colorInteractiveActive-3Ip9Eu {
+			color: var(--text-secondary);
+		}
+	// upload modal
+		.uploadModal-2ifh8j {
+			background: var(--background-primary) !important;
+		}
+		.theme-light .footer-3mqk7D {
+			background-color: var(--background-primary);
+		}
+		.checkbox-1ix_J3 path {
+			fill: var(--theme-accent)
+		}
+		.lookFilled-1Gx00P.colorBrand-3pXr91 {
+			color: var(--text-normal);
 		}
 /// Shadows ==================================================
 	// main chat 
@@ -322,7 +382,7 @@
 			}
 		// reply bar drop shadow 
 			.attachedBars-tZDmyV {
-				box-shadow:var(--elevation-medium);
+				box-shadow:var(--elevation-medium), var(--elevation-stroke);
 			}
 		// small message options container
 			.wrapper-2aW0bm {
@@ -512,7 +572,7 @@
 		.searchBar-3dMhjb {
 			width: 28px;
 			transition: width 0.1s ease-in-out;
-			background-color: var(--background-modifier-accent);
+			background-color: var(--theme-accent-highlight);
 			height: 25px;
 			color: var(--text-normal);
 		}
@@ -558,14 +618,23 @@
 		}
 	// diff message spacing
 		.compact-T3H92H.wrapper-2a6GCs, .cozy-3raOZG.wrapper-2a6GCs {
-			padding-top: 0.025em;
-			padding-bottom: 0.025em;
+			padding-top: 0.1em;
+			padding-bottom: 0.1em;
+		}
+		.messageGroupWrapper-o-Zw7G {
+			.compact-T3H92H.wrapper-2a6GCs, .cozy-3raOZG.wrapper-2a6GCs {
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+			}
 		}
 	// user popout message placeholder 
 		.inputDefault-_djjkz.input-cIJ7To.input-2_SIlA > {
 			::placeholder {
 				content: "message.." !important;
 			}
+		}
+		.input-cIJ7To.focused-1mmYsC, .input-cIJ7To:focus {
+			border-color: var(--theme-accent);
 		}
 /// Hidden elements ==================================================
 	// hide titlebar
@@ -675,9 +744,19 @@
 	// seach options header text
 	.header-2N-gMV {
 		color: var(--theme-accent) !important;
+		font-size: 14px !important;
+		font-weight: bold !important;
 	}
+	// complete keybind
+		.theme-light .dim-1l4L4y span {
+			color: var(--text-normal);
+			background-color: var(--theme-accent-highlight);
+		}
 	// search options background
 	.container-3ayLPN.elevationBorderHigh-2WYJ09 {
+		background-color: var(--theme-main);
+	}
+	#search-results--1 {
 		background-color: var(--theme-main);
 	}
 	// hide option side gradient
@@ -697,6 +776,13 @@
 		.answer-1n6g43 {
 			color: var(--text-secondary) !important;
 		}
+		// username
+			.displayedNick-3xxvzU {
+				color: var(--text-normal) !important;
+			}
+			.displayUsername-Qekxml {
+				color: var(--text-secondary) !important;
+			}
 	// search history text
 		.nonText-3CRkO0 {
 			color: var(--text-normal) !important;
