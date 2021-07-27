@@ -3,58 +3,70 @@
 		--logo-primary: var(--theme-accent);
 		--focus-primary: var(--theme-accent);
 	// blurple, hover, and foreground
-		--brand-experiment: var(--theme-accent);
-		--brand-experiment-560: var(--theme-accent-brighter);
-		--control-brand-foreground: var(--theme-accent);
+		--brand-experiment: var(--theme-accent-brighter);
+		--brand-experiment-560: var(--theme-accent-superbright);
+		--control-brand-foreground: var(--theme-accent-brighter);
+		// mention text / bg color
+		--brand-experiment-530: var(--text-normal);
+		--brand-experiment-15a: var(--theme-accent-superbright);
+		// invite people option
+		--brand-experiment-500: var(--theme-accent);
 	// Text colors
 		--header-primary: var(--text-normal);
-		--header-secondary: var(--theme-accent);
-		--text-normal: #000000;
+		--header-secondary: var(--text-secondary);
+		--text-normal: #1D201D;
 		--text-secondary: var(--theme-accent);
 		--text-muted: #999999;
+		--divider-color: var(--theme-accent-brighter) !important;
 	// Hyperlink color
-		--text-link: #AB5EBA;
-		--channels-default: #000000;
-		--interactive-normal: var(--theme-accent-text);
-		--interactive-hover: #000000;
-		--interactive-active: var(--theme-accent-superdark);
+		--text-link: var(--theme-accent);
+		--channels-default: #292E29;
+		--interactive-normal: var(--theme-accent);
+		--interactive-hover: var(--theme-accent);
+		--interactive-active: var(--theme-accent);
 		--interactive-muted: #999999;
 	// Text background color
-		--background-primary: #fafafa;
+		--background-primary: var(--theme-main);
 	// Channel background
-		--background-secondary: #ffffff;
-		--background-secondary-alt: #ffffff;
+		--background-secondary: var(--theme-main);
+		--background-secondary-alt: var(--theme-main);
 	// Discord top bar and channel background
-		--background-tertiary: #ffffff;
+		--background-tertiary: var(--theme-main);
+	// powercord card background
+		--deprecated-card-bg: var(theme-main);
 	// theme color accents
-		--theme-accent: #7B5C81;
-		--theme-accent-brighter: #8E6A95;
-		--theme-accent-text: #664C6B;
-		--theme-accent-superdark: #432749;
-		--theme-accent-superbright: #AA80B3;
+		--theme-main: #F9F1EC;
+		--theme-accent: #5C946E;
+		--theme-accent-brighter: #80C2AF;
+		--theme-accent-superbright: #BDDACE;
+		--theme-accent-highlight: #E2E9E3;
+		--theme-accent-username: #3B5E46;
+		--theme-accent-text: #292e29;
+		--theme-accent-superdark: #1D201D;
 	// elevation shadows
 		--elevation-stroke: 0 0 0 1px rgba(6,6,7,0.08);
+		--elevation-stroke-strong: 0 0 0 1px rgba(6,6,7,0.16);
 		--elevation-low: 0 1px 0 rgba(6,6,7,0.1),0 1.5px 0 rgba(6,6,7,0.025),0 2px 0 rgba(6,6,7,0.025);
 		--elevation-medium: 0 4px 4px rgba(0,0,0,0.08);
 		--elevation-high: 0 8px 16px rgba(0,0,0,0.16);
 		--guild-header-text-shadow: var(--elevation-high);
 	// Right click menu
-		--background-floating: #fff;
-		--background-mobile-primary: #fbfbfb;
+		--background-floating: var(--background-secondary);
+		--background-mobile-primary: var(--background-primary);
 		--background-mobile-secondary: #e0e0e0;
 	// Channel hover
-		--background-modifier-hover: #FDF9F5;
+		--background-modifier-hover: var(--theme-accent-superbright);
 		--background-modifier-active: var(--background-modifier-accent);
 	// Selected channel
 		--background-modifier-selected: var(--background-modifier-accent);
-		--background-modifier-accent: #FAECE2;
+		--background-modifier-accent: var(--theme-accent-superbright);
 		// mentioned
-		--background-mentioned: var(--background-modifier-accent);
-		--background-mentioned-hover: var(--background-modifier-accent);
+		--background-mentioned: var(--theme-accent-highlight);
+		--background-mentioned-hover: var(--theme-accent-highlight);
 	// Message hover color
 		--background-message-hover: transparent;
 	// Message box
-		--channeltextarea-background: #ffffff;
+		--channeltextarea-background: var(--background-secondary);
 		--activity-card-background: #c7c7c7;
 		--textbox-markdown-syntax: var(--theme-accent-superbright);
 	// spotify color
@@ -66,6 +78,7 @@
 		--replying-border: var(--theme-accent);
 		--replying-bg: rgba(114, 137, 218, 0.05);
 		--replying-bg-hover: var(--theme-accent);
+		--reply-spacing: 2px !important;
 }
 .theme-dark {
 	// logo
@@ -161,14 +174,19 @@
 
 	--rs-avatar-shape: 50% !important;
 
+	--rs-online-color: #80C2AF;
+	--rs-idle-color: #FBD037;
+	--rs-dnd-color: #F2735A;
+	--rs-streaming-color: #AD84D2;
+	/* default colors
 	--rs-online-color: #43b581;
 	--rs-idle-color: #faa61a;
 	--rs-dnd-color: #f04747;
-	--rs-offline-color: #636b75;
 	--rs-streaming-color: #643da7;
+	--rs-offline-color: #636b75;
 	--rs-invisible-color: #747f8d;
+	*/
 	--rs-phone-color: var(--rs-online-color);
-
 	--rs-phone-visible: none !important;
 }
 :root {

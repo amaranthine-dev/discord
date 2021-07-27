@@ -1,13 +1,54 @@
 @import "variables.scss";
 ///	theme by saturn.		
 
-/// root changes
+/// font changes
 	:root {
+		--font-primary: 'JetBrains Mono';
 		--font-display: var(--font-primary);
-		// reply/mention tweaks (i think)
-			//--border-length: 3px;
-			//--left-margin: -7px;
-		
+		--font-code: var(--font-primary);
+		letter-spacing: -0.35px;
+		word-spacing: -4px;
+		line-height: 14px ;
+	}
+	.markup-2BOw-j code.inline {
+		font-family: "JetBrains Mono" !important;
+		font-size: 18px;
+	}
+	.messageContent-2qWWxC {
+		font-size: 18px;
+	}
+	.theme-light .markup-2BOw-j {
+		line-height: 20px;
+	}
+	.repliedTextContent-1R3vnK {
+		font-size: 16px !important;
+		bottom: -2px;
+	}
+	.slateTextArea-1Mkdgw {
+		font-size: 18px;
+		bottom: 4px;
+	}
+	.placeholder-37qJjk {
+		font-size: 18px;
+	}
+	.placeholder-37qJjk[aria-hidden=true] {
+		content: 'write a messsage...';
+	}
+	.aboutMeBody-3GuvKk {
+		font-size: 14px !important;
+		word-wrap: normal;
+		-webkit-line-clamp: 20;
+		code {
+			font-size: 14px !important;
+		}
+	}
+	.note-1oo11U {
+		.textarea-2r0oV8 {
+			font-size: 14px !important;
+		}
+	}
+	.aboutMeBody-3GuvKk.markup-2BOw-j.clamped-IwJfxR {
+		font-size: 12px;
 	}
 /// Color ==================================================
 	// popout color changes 
@@ -67,10 +108,10 @@
 			}
 		// filter color
 			.theme-light .searchAnswer-3Dz2-q, .theme-light .searchFilter-2ESiM3 {
-				background-color: var(--theme-accent-superbright);
+				background-color: var(--theme-accent);
 			}
 			.theme-dark .searchAnswer-3Dz2-q, .theme-dark .searchFilter-2ESiM3 {
-				background-color: var(--theme-accent-superbright);
+				background-color: var(--theme-accent-brighter);
 			}
 	// text color fixes 
 		.activityText-yGKsKm {
@@ -96,7 +137,19 @@
 		// channel category 
 		.container-2ax-kl {
 			color: var(--text-secondary);
-			font-weight: bold;
+			font-size: 14px;
+		}
+		// channel text fix
+		.channelName-2YrOjO {
+			color: var(--text-normal);
+		}
+		// channel options fix
+		.actionIcon-PgcMM2 {
+			color: var(--theme-accent-username);
+		}
+		// add channel recolor
+		.addButtonIcon-2CbG1X {
+			color: var(--theme-accent);
 		}
 	// small sidebar when mentioned 
 		.mentioned-xhSam7:before {
@@ -115,27 +168,37 @@
 		}
 	// unread banner pill tweaks
 			.unread-1xRYoj {
-				background-color: var(--theme-accent);
-				width: 300px;
-				margin-left: -40px;
-				margin-right: 0px;
+				background-color: var(--theme-accent-brighter);
+				width: 100px;
+				border-radius: 10px;
+				margin-left: auto;
+				margin-right: auto;
 				opacity: 1;
 			}
 	// server select/unread pill recolor
 			.item-2hkk8m {
 				background-color: var(--theme-accent);
 			}
+			.text-2e2ZyG {
+				font-size: 14px;
+				font-weight: normal;
+			}
 	// viewing older messages 
 			.jumpToPresentBar-G1R9s6 {
-				background: var(--theme-accent);
+				background: var(--theme-accent-brighter);
+				opacity: 1;
+				text-shadow: var(--elevation-high);
 			}
 	// reactions tweaks 
 		.reactionInner-15NvIl {
-			background-color: var(--background-modifier-hover);
+			background-color: var(--theme-accent-highlight);
 			border-radius: 10px;
 		}
+		.theme-light .reaction-1hd86g.reactionMe-wv5HKu .reactionCount-2mvXRV {
+			color: var(--text-normal);
+		}
 		.reactionInner-15NvIl[aria-pressed="true"] {
-			background-color: var(--background-modifier-accent);
+			background-color: var(--theme-accent-superbright);
 			border-radius: 10px;
 		}
 	// reply stuff that i don't understand
@@ -144,6 +207,10 @@
 		}
 		#app-mount .replying-1x3H0T::before {
 			content: none;
+		}
+	// change reply preview text 
+		.repliedMessage-VokQwo {
+			color: var(--text-normal);
 		}
 	// powerbottom toggle switch color fix
 		.icon-3Gkjwa {
@@ -162,17 +229,64 @@
 		}
 	// discord icon perm color 
 		.childWrapper-anI2G9 {
-			background-image: linear-gradient(to bottom, #EEC19E,#D1A296,#B98A91,#A0758C,#7B5C81); 
+			background-image: linear-gradient(to bottom, var(--theme-accent-brighter), var(--theme-accent-brighter)); 
 		}
 		.homeIcon-FuNwkv {
-			color: var(--background-modifier-hover);
+			color: var(--theme-main);
+		}
+	// powercord card bg fix
+		.cardPrimary-1Hv-to {
+			background: var(--theme-main);
+			border-color: var(--theme-accent-brighter);
+		}
+	// new messages divider 
+		.divider-JfaTT5 {
+			--divider-color: var(--theme-accent-brighter);
+			height: 3px;
+			top: 1px;
+			bottom: 1px;
+			margin-right: 1em;
+			margin-left: 1em;
+			background-color: var(--theme-accent-brighter);
+			border-top: 2px solid var(--theme-accent-brighter);
+			//border-top: thick solid var(--theme-accent-brighter);
+		}
+		.content-1o0f9g {
+			color: var(--theme-accent);
+			font-weight: bold;
+		}
+		.group-spacing-0 .divider-3_HH5L {
+			margin-bottom: 4px;
+			margin-top: 2px;
+		}
+	// typing indicator recolor
+		.base-gE7OpD {
+			color: var(--text-secondary);
+		}
+	// new pins indicator
+		.iconBadge-qZ4Ksk {
+			background-color: var(--theme-accent);
+		}
+	// channel icon 
+		.icon-1DeIlz {
+			color: var(--theme-accent-username) !important;
+		}
+		.iconWrapper-2OrFZ1[aria-label="Text Channel"] svg {
+			color: var(--theme-accent-username) !important;
+		}
+	// titlebar icons
+		.iconWrapper-2OrFZ1 {
+			color: var(--theme-accent);
 		}
 /// Shadows ==================================================
 	// main chat 
 		// main chat window drop shadow 
 			.chatContent-a9vAAp {
-				box-shadow: inset var(--elevation-medium);
+				//box-shadow: inset var(--elevation-medium);
 				transition: box-shadow 0.2s ease-in-out;
+			}
+			.title-3qD0b- {
+				border: transparent;
 			}
 		// usernames in chat 
 			/*.username-1A8OIy {
@@ -182,7 +296,8 @@
 				-webkit-text-stroke-color: var(--theme-accent-text);
 			}*/
 			.theme-light .username-1A8OIy.desaturateUserColors-1gar-1.clickable-1bVtEA, .theme-light .roleColor-rz2vM0.desaturateUserColors-1gar-1 {
-				filter:contrast(80%);
+				// filter:contrast(80%);
+				color: var(--theme-accent) !important;
 			}
 			.headerText-3Uvj1Y {
 				//background-color: gray;
@@ -229,11 +344,14 @@
 		}
 	// embed tweaks 
 		.embedWrapper-lXpS3L {
-			box-shadow: var(--elevation-low), var(--elevation-stroke);
+			box-shadow: var(--elevation-medium), var(--elevation-stroke-strong);
+			border: none;
 		}
 	// code block tweaks 
-		code {
-			box-shadow: inset var(--elevation-low), var(--elevation-stroke);
+		.markup-2BOw-j code {
+			background: #F3E2D8;
+			font-family: 'JetBrains Mono';
+			border-radius: 5px;
 		}
 	// picture in picture shadow
 		.pictureInPictureVideo-2iKsGg {
@@ -289,6 +407,10 @@
 			margin-top: -2px;
 			margin-bottom: -25px;
 		}
+	// server unread / selected pill
+		.item-2hkk8m {
+			background-color: var(--theme-accent-brighter);
+		}
 	// server icons tweaks 
 		.circleButtonBase-2DCxIZ {
 			border-radius: 20px;
@@ -306,8 +428,13 @@
 		}
 		// hide svg shadow
 		[aria-label=Servers].expandedFolderIconWrapper-Huv7rA:not(.selected) svg {
-			box-shadow: none;
+			box-shadow: none !important;
 		  }
+		 .listItem-GuPuDH {
+			.expandedFolderIconWrapper-Huv7rA svg {
+				box-shadow: none !important;
+			}
+		}
 		.folder-1hbNCn {
 			border-radius: 50%;
 		}
@@ -369,7 +496,8 @@
 			width: auto;
 			left: auto;
 			right: -8px;
-			background-color: var(--theme-accent);
+			background-color: var(--theme-accent-brighter);
+			opacity: 1;
 		}
 	// server icon in inbox 
 		.icon-3o6xvg {
@@ -382,7 +510,7 @@
 		}
 	// search bar transition
 		.searchBar-3dMhjb {
-			width: 32px;
+			width: 28px;
 			transition: width 0.1s ease-in-out;
 			background-color: var(--background-modifier-accent);
 			height: 25px;
@@ -392,8 +520,52 @@
 		.submenuContainer-2gbm7M {
 			left: -8px;
 		}
-		#message-add-reaction, #message-item-0-0-1, #user-context-invite-to-server, #user-context-roles {
+		#message-add-reaction, #message-item-0-0-1, #user-context-invite-to-server, #user-context-roles, #channel-context-channel-notifications, #channel-context-mute-channel {
 			left: 8px;
+		}
+		// delete channel color tweak
+		.colorDanger-2qLCe1.focused-3afm-j {
+			background-color: var(--theme-accent);
+		}
+		// divider tweaks
+		.separator-2I32lJ {
+			border-bottom: 2px solid var(--theme-accent-brighter);
+			width: calc(100% + 10px);
+			left: -10px;
+		}
+	// dated divider 
+		.divider-3_HH5L.hasContent-1_DUdQ.divider-JfaTT5.hasContent-1cNJDh {
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+	}
+	// reply shape tweaks
+		.repliedMessage-VokQwo {
+			--reply-spacing: 2px;
+		}
+		.repliedMessage-VokQwo span {
+			opacity: 1 !important;
+		}
+		.repliedMessage-VokQwo:before {
+			border-color: var(--theme-accent-username);
+			height: 50%;
+			width: 3%;
+		}
+	// channel topic font weight
+		.topic-TCb_qw {
+			font-weight: 500 !important;
+			font-size: 16px;
+			font-style: italic;
+		}
+	// diff message spacing
+		.compact-T3H92H.wrapper-2a6GCs, .cozy-3raOZG.wrapper-2a6GCs {
+			padding-top: 0.025em;
+			padding-bottom: 0.025em;
+		}
+	// user popout message placeholder 
+		.inputDefault-_djjkz.input-cIJ7To.input-2_SIlA > {
+			::placeholder {
+				content: "message.." !important;
+			}
 		}
 /// Hidden elements ==================================================
 	// hide titlebar
@@ -458,18 +630,22 @@
 		.spotifyIcon-2J9kSv path {
 			display: none;
 		}
+	// hide mentioned server pill
+		.mention-1f5kbO {
+			display: none;
+		}
 /// search bar/inbox stuff ==================================================
 	.container-2j2llN {
-		box-shadow: var(--elevation-medium);
+		box-shadow: var(--elevation-medium), var(--elevation-stroke);
 		border-radius: 10px;
 		color: var(--theme-accent-text);
 	}
 	.searchResult-9tQ1uo {
-		box-shadow: var(--elevation-medium);
+		box-shadow: var(--elevation-medium), var(--elevation-stroke);
 		border-radius: 10px;
 	}
 	.messages-3G3erD {
-		box-shadow: var(--elevation-medium);
+		box-shadow: var(--elevation-medium), var(--elevation-stroke);
 		border-radius: 10px;
 		top: 10px;
 	}
@@ -478,7 +654,7 @@
 		background-color: var(--background-primary);
 	}
 	.messageGroupWrapper-o-Zw7G {
-		box-shadow: var(--elevation-medium);
+		box-shadow: var(--elevation-medium), var(--elevation-stroke);
 		right: 4px;
 	}
 	.header-2-Imhb {
@@ -491,8 +667,48 @@
 		width: auto;
 		border-radius: 10px;
 		margin-bottom: 10px;
-		box-shadow: var(--elevation-medium);
+		box-shadow: var(--elevation-medium), var(--elevation-stroke);
 	}
+	.focused-31_ccS .searchBar-3dMhjb, .open-6_Y_aH .searchBar-3dMhjb {
+		background-color: var(--theme-accent-superbright);
+	}
+	// seach options header text
+	.header-2N-gMV {
+		color: var(--theme-accent) !important;
+	}
+	// search options background
+	.container-3ayLPN.elevationBorderHigh-2WYJ09 {
+		background-color: var(--theme-main);
+	}
+	// hide option side gradient
+	.option-96V44q::after {
+		background: none !important;
+	}
+	// change hovered option color 
+		.layer-v9HyYc {
+			.selected-rZcOL- {
+				background-color: var(--theme-accent-superbright) !important;
+			}
+		}
+	//  text for option color fix
+		.filter-3Y_im- {
+			color: var(--text-normal) !important;
+		}
+		.answer-1n6g43 {
+			color: var(--text-secondary) !important;
+		}
+	// search history text
+		.nonText-3CRkO0 {
+			color: var(--text-normal) !important;
+		}
+	// clear search history button color
+		.searchClearHistory-2cSSMO {
+			color: var(--theme-accent) !important;
+		}
+	// hide learn more
+		.searchLearnMore-3SQUAj {
+			display: none;
+		}
 /// unused	==================================================
 /*
 	// messages pfp shadow 
