@@ -11,12 +11,14 @@
 		--brand-experiment-15a: var(--theme-accent-superbright);
 		// invite people option
 		--brand-experiment-500: var(--theme-accent);
+		// right click menu clicked on 
+		--brand-experiment-600: var(--theme-accent);
 	// Text colors
 		--header-primary: var(--text-normal);
 		--header-secondary: var(--text-secondary);
 		--text-normal: #1D201D;
 		--text-secondary: var(--theme-accent);
-		--text-muted: #999999;
+		--text-muted: #949E94;
 		--divider-color: var(--theme-accent-brighter) !important;
 	// Hyperlink color
 		--text-link: #CE8D64;
@@ -24,7 +26,7 @@
 		--interactive-normal: var(--theme-accent);
 		--interactive-hover: var(--theme-accent);
 		--interactive-active: var(--theme-accent);
-		--interactive-muted: #999999;
+		--interactive-muted: #949E94;
 	// Text background color
 		--background-primary: var(--theme-main);
 	// Channel background
@@ -40,7 +42,7 @@
 		--theme-accent-brighter: #80C2AF;
 		--theme-accent-superbright: #BDDACE;
 		--theme-accent-highlight: #E2E9E3;
-		--theme-accent-username: #3B5E46;
+		--theme-accent-username: #326743;
 		--theme-accent-text: #292e29;
 		--theme-accent-superdark: #1D201D;
 	// elevation shadows
