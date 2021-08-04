@@ -89,6 +89,10 @@
 			top: 3%;
 			font-weight: 600 !important;
 		}
+	// live make not italic
+		.base-PmTxvP {
+			font-style: normal;
+		}
 /// Color ==================================================
 	// popout color changes 
 		// heading text recolor 
@@ -348,7 +352,7 @@
 		.uploadModal-2ifh8j {
 			background: var(--background-primary) !important;
 		}
-		.theme-light .footer-3mqk7D {
+		.theme-light .footer-3mqk7D, .theme-light .footer-2gL1pp {
 			background-color: var(--background-primary);
 		}
 		.checkbox-1ix_J3 path {
@@ -372,15 +376,36 @@
 		}
 		// change my own name to a fancy color
 			[data-author-id="350035677850894340"] .username-1A8OIy {
-				color: var(--theme-accent-username) !important;
+				background-image: linear-gradient(315deg, #987B65, #866860, #76585D, #664B5A, #4E3B52) !important;
+				color: transparent !important;
+				filter: saturate(4);
+				background-clip: text;
+				-webkit-background-clip: text;
 			}
 		// make replied usernames not that color	
 			.repliedMessage-VokQwo .username-1A8OIy {
 				color: var(--theme-accent) !important;
+				filter: saturate(1);
 			} 
 	// reply context icon 
 		.repliedTextContentIcon-1ivTae {
 			color: var(--theme-accent-text);
+		}
+	// username in dm call on hover
+		.title-29uC1r {
+			color: var(--theme-accent-text);
+		}
+	// call backgroud im pretty sure 
+		/*.root-2sELX6 {
+			background-color: var(--theme-accent-highlight);
+		}*/
+	// change add friend button
+		.tabBar-ZmDY9v .item-3HknzM:nth-last-child(1), .tabBody-3YRQ8W:nth-last-child(1) {
+			background-color: var(--theme-accent) !important;
+		}
+	// change phone online to theme color
+		.cursorDefault-dsQJ1n {
+				fill: var(--theme-accent) !important;
 		}
 /// Shadows ==================================================
 	// main chat 
@@ -432,7 +457,43 @@
 		.container-3baos1 {
 			box-shadow: var(--elevation-low), var(--elevation-stroke);
 			border-radius: 25px;
-			margin: 5px;
+			height: 48px;
+		}
+		.actionButtons-14eAc_ {
+			width: 120px;
+		}
+		.actionButtons-14eAc_ button {
+			width: 60px;
+			content: none;
+		}
+		.buttonIcon-Od8mYw.withText-10pQhr {
+			margin-left: 4px !important;
+		}
+		.actionButtons-14eAc_ > .button-1YfofB.buttonColor-7qQbGO, .button-1YfofB .buttonColor-7qQbGO {
+			background-color: var(--theme-accent-brighter);
+		}
+		.button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp:hover, .button-1YfofB .buttonColor-7qQbGO.buttonActive-3FrkXp:hover {
+			background-color: var(--theme-accent-brighter);
+		}
+		.panels-j1Uci_  .container-3baos1 .flex-1O1GKY .button-14-BFJ:not(:nth-child(0)) {
+			bottom: 48px;
+			left: 4px;
+			border-radius: 50%;
+			position: relative;
+		}
+		.nameTag-3uD-yy.canCopy-2VBT7N {
+			top: 0px;
+			position: relative;
+		}
+		.avatarWrapper-2yR4wp {
+			top: 0px;
+			position: relative;
+		}
+		.subtext-3CDbHg, .default-3sgIpy, .customStatus-3tC2ig {
+			overflow: visible !important;
+		}
+		.hoverRoll-YK53gQ {
+			width: 210%;
 		}
 	// removes broken drop shadow on chat pfps 
 		.mask-1l8v16 {
@@ -461,6 +522,20 @@
 		//#guildsnav___home {
 
 		//}
+	// bar for user volume
+		.theme-light .bar-2Qqk5Z {
+			background: var(--theme-accent-highlight);
+		}
+	// little handle in user volume bar
+		.grabber-3mFHz2 {
+			background-color: var(--theme-accent);
+			box-shadow: 0 0 0 0 #000;
+			border: 1px solid transparent;
+		}
+	// make unread channel name normal
+		.modeConnected-3IsKId .name-23GUGE, .modeConnected-3IsKId:hover .name-23GUGE, .modeSelected-346R90 .name-23GUGE, .modeSelected-346R90:hover .name-23GUGE, .modeUnread-1qO3K1 .name-23GUGE, .modeUnread-1qO3K1:hover .name-23GUGE, .notInteractive-1X92pj.modeConnected-3IsKId .name-23GUGE, .notInteractive-1X92pj.modeSelected-346R90 .name-23GUGE {
+			color: var(--text-normal);
+		}
 /// Size/shape tweaks ==================================================	
 	// nitro banner fix 
 		.bannerPremium-2hSAwz {
@@ -552,6 +627,11 @@
 			border-radius: 12px;
 			box-shadow: none;
 		}
+		// folder expanded background 
+			.expandedFolderBackground-1cujaW {
+				background-color: var(--theme-accent-highlight);
+				border-radius: 50px !important;
+			}
 		.childWrapper-anI2G9 {
 			border-radius: 12px;
 		}
@@ -633,6 +713,9 @@
 		#message-add-reaction, #message-item-0-0-1, #user-context-invite-to-server, #user-context-roles, #channel-context-channel-notifications, #channel-context-mute-channel, #guild-context-mute-guild {
 			left: 8px;
 		}
+		#channel-context-channel-notifications {
+		//	display: none;
+		}
 		// delete channel color tweak
 		.colorDanger-2qLCe1.focused-3afm-j {
 			background-color: var(--theme-accent);
@@ -658,7 +741,7 @@
 		.repliedMessage-VokQwo:before {
 			border-color: var(--theme-accent-username);
 			height: 50%;
-			width: 3%;
+			width: 32px;
 		}
 	// channel topic font weight
 		.topic-TCb_qw {
@@ -697,6 +780,13 @@
 		}
 		.input-cIJ7To.focused-1mmYsC, .input-cIJ7To:focus {
 			border-color: var(--theme-accent);
+		}
+	// mutual server nick realignment
+		.listRow-1iDGel .icon-3o6xvg {
+			margin-left: -10px;
+		}
+		.listRowContent-i8Bizk {
+			margin-left: 6px;
 		}
 /// Hidden elements ==================================================
 	// hide titlebar
@@ -855,6 +945,10 @@
 		}
 	// hide learn more
 		.searchLearnMore-3SQUAj {
+			display: none;
+		}
+	// hide activity panel 
+		.nowPlayingColumn-2sl4cE {
 			display: none;
 		}
 /// unused	==================================================

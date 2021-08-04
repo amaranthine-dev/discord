@@ -20,7 +20,8 @@
 		--text-secondary: var(--theme-accent);
 		--text-muted: #949E94;
 		--divider-color: var(--theme-accent-brighter) !important;
-	// Hyperlink color
+		--text-positive: var(--theme-accent);
+	// Hyperlink colorcontent: none;
 		--text-link: #CE8D64;
 		--channels-default: #292E29;
 		--interactive-normal: var(--theme-accent);
@@ -81,78 +82,92 @@
 		--replying-bg: rgba(114, 137, 218, 0.05);
 		--replying-bg-hover: var(--theme-accent);
 		--reply-spacing: 2px !important;
-}
+	}
 .theme-dark {
 	// logo
-		--logo-primary: var(--theme-accent);
-		--focus-primary: var(--theme-accent);
-	// blurple & hover
-		--brand-experiment: var(--theme-accent);
-		--brand-experiment-560: var(--theme-accent-brighter);
-	// Text colors
-		--header-primary: var(--text-normal);
-		--header-secondary: var(--theme-accent);
-		--text-normal: #FDF9F5;
-		--text-secondary: #E8D9C9;
-		--text-muted: #999999;
-	// Hyperlink color
-		--text-link: #AB5EBA;
-		--channels-default: var(--text-normal);
-		--interactive-normal: var(--theme-accent-darker);
-		--interactive-hover: var(--text-normal);
-		--interactive-active: var(--text-normal);
-		--interactive-muted: #999999;
-	// Text background color
-		--background-primary: #29222A;
-	// Channel background
-		--background-secondary: #1F1221;
-		--background-secondary-alt: #1F1221;
-	// Discord top bar and channel background
-		--background-tertiary: #1F1221;
-	// theme color accents
-		--theme-accent: #7B5C81;
-		--theme-accent-brighter: #8E6A95;
-		// 8E6A95
-		--theme-accent-darker: #664C6B;
-		--theme-accent-text: var(--text-secondary);
-		// #664C6B
-		--theme-accent-superdark: #432749;
-		--theme-accent-superbright: #AA80B3;
-	// Right click menu
-		--background-floating: var(--background-secondary);
-		--background-mobile-primary: #fbfbfb;
-		--background-mobile-secondary: #e0e0e0;
-	// Channel hover
-		--background-modifier-hover: var(--theme-accent);
-		--background-modifier-active: var(--theme-accent);
-	// Selected channel
-		--background-modifier-selected: var(--background-modifier-accent);
-		--background-modifier-accent: var(--theme-accent-brighter);
-		// mentioned
-		--background-mentioned: var(--background-modifier-accent);
-		--background-mentioned-hover: var(--background-modifier-accent);
-	// Message hover color
-		--background-message-hover: transparent;
-	// elevation shadows
-		--elevation-stroke: 0 0 0 1px rgba(249,249,248,0.08);
-		--elevation-low: 0 1px 0 rgba(249,249,248,0.1),0 1.5px 0 rgba(249,249,248,0.05,0) 2px 0 rgba(249,249,248,0.05);
-		--elevation-medium: 0 4px 4px rgba(255,255,255,0.08);
-		--elevation-high: 0 8px 16px rgba(255,255,255,0.15);
-		--guild-header-text-shadow: var(--elevation-high);
-	// Message box
-		--channeltextarea-background: var(--background-secondary);
-		--activity-card-background: #c7c7c7;
-		--textbox-markdown-syntax: var(--theme-accent-superbright);
-	// spotify color
-		--spotify-accent: var(--theme-accent-brighter);
-	// reply variables
+	--logo-primary: var(--theme-accent);
+	--focus-primary: var(--theme-accent);
+// blurple, hover, and foreground
+	--brand-experiment: var(--theme-accent-brighter);
+	--brand-experiment-560: var(--theme-accent-superbright);
+	--control-brand-foreground: var(--theme-accent-brighter);
+	// mention text / bg color
+	--brand-experiment-530: var(--text-normal);
+	--brand-experiment-15a: var(--theme-accent-superbright);
+	// invite people option
+	--brand-experiment-500: var(--theme-accent);
+	// right click menu clicked on 
+	--brand-experiment-600: var(--theme-accent);
+// Text colors
+	--header-primary: var(--text-normal);
+	--header-secondary: var(--text-secondary);
+	--text-normal: #1D201D;
+	--text-secondary: var(--theme-accent);
+	--text-muted: #949E94;
+	--divider-color: var(--theme-accent-brighter) !important;
+	--text-positive: var(--theme-accent);
+// Hyperlink colorcontent: none;
+	--text-link: #CE8D64;
+	--channels-default: #292E29;
+	--interactive-normal: var(--theme-accent);
+	--interactive-hover: var(--theme-accent);
+	--interactive-active: var(--theme-accent-highlight);
+	--interactive-muted: #949E94;
+// Text background color
+	--background-primary: var(--theme-main);
+// Channel background
+	--background-secondary: var(--theme-main);
+	--background-secondary-alt: var(--theme-main);
+// Discord top bar and channel background
+	--background-tertiary: var(--theme-main);
+// powercord card background
+	--deprecated-card-bg: var(theme-main);
+// theme color accents
+	--theme-main: #F9F1EC;
+	--theme-accent: #5C946E;
+	--theme-accent-brighter: #80C2AF;
+	--theme-accent-superbright: #BDDACE;
+	--theme-accent-highlight: #E2E9E3;
+	--theme-accent-username: #326743;
+	--theme-accent-text: #292e29;
+	--theme-accent-superdark: #1D201D;
+// elevation shadows
+	--elevation-stroke: 0 0 0 1px rgba(6,6,7,0.08);
+	--elevation-stroke-strong: 0 0 0 1px rgba(6,6,7,0.16);
+	--elevation-low: 0 1px 0 rgba(6,6,7,0.1),0 1.5px 0 rgba(6,6,7,0.025),0 2px 0 rgba(6,6,7,0.025);
+	--elevation-medium: 0 4px 4px rgba(0,0,0,0.08);
+	--elevation-high: 0 8px 16px rgba(0,0,0,0.16);
+	--guild-header-text-shadow: var(--elevation-high);
+// Right click menu
+	--background-floating: var(--background-secondary);
+	--background-mobile-primary: var(--background-primary);
+	--background-mobile-secondary: #e0e0e0;
+// Channel hover
+	--background-modifier-hover: var(--theme-accent-superbright);
+	--background-modifier-active: var(--background-modifier-accent);
+// Selected channel
+	--background-modifier-selected: var(--background-modifier-accent);
+	--background-modifier-accent: var(--theme-accent-superbright);
+	// mentioned
+	--background-mentioned: var(--theme-accent-highlight);
+	--background-mentioned-hover: var(--theme-accent-highlight);
+// Message hover color
+	--background-message-hover: transparent;
+// Message box
+	--channeltextarea-background: var(--background-secondary);
+	--activity-card-background: #c7c7c7;
+	--textbox-markdown-syntax: var(--theme-accent);
+// spotify color
+	--spotify-accent: var(--theme-accent-brighter);
+// reply variables
 	--mentioned-border: var(--theme-accent);
 	--mentioned-bg: var(--background-mentioned);
 	--mentioned-bg-hover: var(--background-mentioned-hover);
 	--replying-border: var(--theme-accent);
 	--replying-bg: rgba(114, 137, 218, 0.05);
 	--replying-bg-hover: var(--theme-accent);
-	}
+	--reply-spacing: 2px !important;
+}
 // sass variables (WIP
 /*
 :root {
