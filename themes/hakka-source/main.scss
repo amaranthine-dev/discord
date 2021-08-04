@@ -713,9 +713,9 @@
 		#message-add-reaction, #message-item-0-0-1, #user-context-invite-to-server, #user-context-roles, #channel-context-channel-notifications, #channel-context-mute-channel, #guild-context-mute-guild {
 			left: 8px;
 		}
-		#channel-context-channel-notifications {
-		//	display: none;
-		}
+		/*#channel-context-channel-notifications {
+			display: none;
+		}*/
 		// delete channel color tweak
 		.colorDanger-2qLCe1.focused-3afm-j {
 			background-color: var(--theme-accent);

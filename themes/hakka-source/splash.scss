@@ -1,0 +1,10 @@
+#splash::after {
+    content: url(https://github.com/byzantine-dev/discord/blob/master/themes/mutual-assets/hakka.svg);
+    position: absolute;
+    top: [y];
+    left: [x];
+  }
+  
+  #splash video {
+    display: none;
+  }
