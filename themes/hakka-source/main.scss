@@ -93,6 +93,17 @@
 		.base-PmTxvP {
 			font-style: normal;
 		}
+	// make username thicker
+		.headerTagUsernameNoNickname-2-Y5Ct {
+			font-weight: 800;
+		}
+	// make discriminator smaller font weight
+		.headerTagDiscriminatorNoNickname-D-AYUN {
+			font-weight: 700;
+			font-size: 75%;
+			vertical-align: baseline;
+			margin-left: 2px;
+		}
 /// Color ==================================================
 	// popout color changes 
 		// heading text recolor 
@@ -286,7 +297,7 @@
 	// new messages divider 
 		.divider-JfaTT5 {
 			--divider-color: var(--theme-accent-brighter);
-			height: 3px;
+			height: 2px;
 			top: 1px;
 			bottom: 1px;
 			margin-right: 1em;
@@ -325,10 +336,15 @@
 		}
 	// role remove color on border
 		.role-2irmRk {
-			border-color: var(--theme-accent) !important;
+			border-color: var(--theme-accent-brighter) !important;
 			border: 1px solid;
 			font-size: 14px;
+			font-weight: 400;
+			height: 24px;
+			vertical-align: text-bottom;
 			color: var(--text-normal);
+			border-radius: 4px;
+			background-color: var(--theme-accent-superbright);
 		}
 	// friends list fix background 
 		.peopleColumn-29fq28 {
@@ -378,15 +394,51 @@
 			[data-author-id="350035677850894340"] .username-1A8OIy {
 				background-image: linear-gradient(315deg, #987B65, #866860, #76585D, #664B5A, #4E3B52) !important;
 				color: transparent !important;
-				filter: saturate(4);
+				filter: saturate(6) brightness(0.8);
 				background-clip: text;
 				-webkit-background-clip: text;
 			}
-		// make replied usernames not that color	
-			.repliedMessage-VokQwo .username-1A8OIy {
-				color: var(--theme-accent) !important;
-				filter: saturate(1);
-			} 
+		// 
+			.userPopout-xaxa6l[aria-label=byzantine] {
+				background-color: var(--text-normal);
+				color: var(--background-primary);
+				.avatar-37jOim {
+					margin: 2px;
+					border: 4px solid var(--theme-accent-username);
+					background-color: transparent;
+				}
+				.headerTagUsernameNoNickname-2-Y5Ct {
+					color: var(--background-primary);
+					font-weight: 700;
+				}
+				.headerTagDiscriminatorNoNickname-D-AYUN {
+					color: var(--theme-accent-brighter);
+				}
+				.customStatus-oN4ZZY {
+					color: var(--background-primary);
+				}
+				.base-1x0h_U.muted-3-7c5L {
+					color: var(--theme-accent);
+				}
+				.markup-2BOw-j {
+					color: var(--background-primary);
+				}
+				.bodyInnerWrapper-26fQXj {
+					background-color: var(--text-normal);
+				}
+				.textarea-2r0oV8 {
+					color: var(--background-primary);
+				}
+				.textarea-2r0oV8:focus {
+					color: var(--background-primary) !important;
+					background-color: var(--theme-accent-text);
+				}
+			}
+	// make replied usernames not over saturated	
+		.repliedMessage-VokQwo .username-1A8OIy {
+			color: var(--theme-accent) !important;
+			filter: saturate(1);
+		} 
 	// reply context icon 
 		.repliedTextContentIcon-1ivTae {
 			color: var(--theme-accent-text);
@@ -407,6 +459,14 @@
 		.cursorDefault-dsQJ1n {
 				fill: var(--theme-accent) !important;
 		}
+	// username on name click popout color fix
+		.headerTagUsernameNoNickname-2-Y5Ct {
+			color: var(--text-normal);
+		}
+	// change green color
+	.colorGreen-29iAKY {
+		background-color: var(--theme-accent) !important;
+	}
 /// Shadows ==================================================
 	// main chat 
 		// main chat window drop shadow 
@@ -535,6 +595,15 @@
 	// make unread channel name normal
 		.modeConnected-3IsKId .name-23GUGE, .modeConnected-3IsKId:hover .name-23GUGE, .modeSelected-346R90 .name-23GUGE, .modeSelected-346R90:hover .name-23GUGE, .modeUnread-1qO3K1 .name-23GUGE, .modeUnread-1qO3K1:hover .name-23GUGE, .notInteractive-1X92pj.modeConnected-3IsKId .name-23GUGE, .notInteractive-1X92pj.modeSelected-346R90 .name-23GUGE {
 			color: var(--text-normal);
+		}
+	// make profile badges greyscale
+		.profileBadges-ohc0Vu {
+			filter: brightness(0.75) saturate(0.4) sepia(.75);
+		}
+	// add shadow to role circle on popout
+		.roleCircle-3xAZ1j {
+			box-shadow: var(--elevation-medium);
+			border: .025em solid var(--text-normal);
 		}
 /// Size/shape tweaks ==================================================	
 	// nitro banner fix 
@@ -788,6 +857,10 @@
 		.listRowContent-i8Bizk {
 			margin-left: 6px;
 		}
+	// remove edit channel padding at top of channel
+		.buttonContainer-2GVjL_ {
+			margin-top: -8px;
+		}
 /// Hidden elements ==================================================
 	// hide titlebar
 		//.titleBar-AC4pGV {
@@ -853,6 +926,14 @@
 		}
 	// hide mentioned server pill
 		.mention-1f5kbO {
+			display: none;
+		}
+	// hide empty channel icon
+		.emptyChannelIcon-cc932w {
+			display: none;
+		}
+	// hide "this is the start of #channel" text
+		.description-1sDbzZ {
 			display: none;
 		}
 /// search bar/inbox stuff ==================================================

@@ -18,6 +18,7 @@
 		--header-secondary: var(--text-secondary);
 		--text-normal: #1D201D;
 		--text-secondary: var(--theme-accent);
+		--text-username: var(--theme-accent-username);
 		--text-muted: #949E94;
 		--divider-color: var(--theme-accent-brighter) !important;
 		--text-positive: var(--theme-accent);
@@ -46,6 +47,7 @@
 		--theme-accent-username: #326743;
 		--theme-accent-text: #292e29;
 		--theme-accent-superdark: #1D201D;
+		--theme-accent-difference: #9B6F8D;
 	// elevation shadows
 		--elevation-stroke: 0 0 0 1px rgba(6,6,7,0.08);
 		--elevation-stroke-strong: 0 0 0 1px rgba(6,6,7,0.16);
