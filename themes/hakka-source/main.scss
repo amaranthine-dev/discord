@@ -104,6 +104,64 @@
 			vertical-align: baseline;
 			margin-left: 2px;
 		}
+/// personal tweaks
+	// change my own name in chat to gradient
+		[data-author-id="350035677850894340"] .username-1A8OIy {
+			background-image: var(--name-gradient) !important;
+			color: transparent !important;
+			filter: saturate(6) brightness(0.8);
+			background-clip: text;
+			-webkit-background-clip: text;
+		}
+	// popout
+		.userPopout-xaxa6l[aria-label=byzantine] {
+			background-color: var(--text-normal);
+			color: var(--background-primary);
+			.avatar-37jOim {
+				margin: 2px;
+				border: 4px solid var(--theme-accent-username);
+				background-color: transparent;
+			}
+			.headerTag-3GFl76 {
+				margin-bottom: 10px;
+				rect: width="100px" height="10px" fill="var(--name-gradient)";
+			}
+			.headerTagUsernameNoNickname-2-Y5Ct {
+				background-image: var(--name-gradient);
+				font-weight: 900;
+				color: transparent;
+				filter: saturate(4) brightness(1.5);
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
+			.headerTagDiscriminatorNoNickname-D-AYUN {
+				color: var(--theme-accent);
+			}
+			.customStatus-oN4ZZY {
+				color: var(--background-primary);
+			}
+			.base-1x0h_U.muted-3-7c5L {
+				color: var(--theme-accent-username);
+			}
+			.markup-2BOw-j {
+				color: var(--background-primary);
+			}
+			.bodyInnerWrapper-26fQXj {
+				background-color: var(--text-normal);
+			}
+			.textarea-2r0oV8 {
+				color: var(--background-primary);
+			}
+			.textarea-2r0oV8:focus {
+				color: var(--background-primary) !important;
+				background-color: var(--theme-accent-text);
+			}
+			.role-2irmRk {
+				color: var(--background-primary);
+				border-color: var(--theme-accent-username) !important;
+				background-color: var(--theme-accent-text);
+			}
+		}
 /// Color ==================================================
 	// popout color changes 
 		// heading text recolor 
@@ -390,50 +448,6 @@
 			// filter:contrast(80%);
 			color: var(--theme-accent) !important;
 		}
-		// change my own name to a fancy color
-			[data-author-id="350035677850894340"] .username-1A8OIy {
-				background-image: linear-gradient(315deg, #987B65, #866860, #76585D, #664B5A, #4E3B52) !important;
-				color: transparent !important;
-				filter: saturate(6) brightness(0.8);
-				background-clip: text;
-				-webkit-background-clip: text;
-			}
-		// 
-			.userPopout-xaxa6l[aria-label=byzantine] {
-				background-color: var(--text-normal);
-				color: var(--background-primary);
-				.avatar-37jOim {
-					margin: 2px;
-					border: 4px solid var(--theme-accent-username);
-					background-color: transparent;
-				}
-				.headerTagUsernameNoNickname-2-Y5Ct {
-					color: var(--background-primary);
-					font-weight: 700;
-				}
-				.headerTagDiscriminatorNoNickname-D-AYUN {
-					color: var(--theme-accent-brighter);
-				}
-				.customStatus-oN4ZZY {
-					color: var(--background-primary);
-				}
-				.base-1x0h_U.muted-3-7c5L {
-					color: var(--theme-accent);
-				}
-				.markup-2BOw-j {
-					color: var(--background-primary);
-				}
-				.bodyInnerWrapper-26fQXj {
-					background-color: var(--text-normal);
-				}
-				.textarea-2r0oV8 {
-					color: var(--background-primary);
-				}
-				.textarea-2r0oV8:focus {
-					color: var(--background-primary) !important;
-					background-color: var(--theme-accent-text);
-				}
-			}
 	// make replied usernames not over saturated	
 		.repliedMessage-VokQwo .username-1A8OIy {
 			color: var(--theme-accent) !important;
