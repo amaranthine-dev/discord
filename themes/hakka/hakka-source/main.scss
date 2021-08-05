@@ -118,14 +118,15 @@
 			background-color: var(--text-normal);
 			color: var(--background-primary);
 			.avatar-37jOim {
-				margin: 2px;
-				border: 4px solid var(--theme-accent-username);
+				margin-top: 6px;
+				margin-left: 0px;
+				border: 0px solid var(--theme-accent-text);
 				background-color: transparent;
+				background-image: var(--theme-accent-text);
+				box-shadow: var(--elevation-stroke-inverse);
 			}
-			.headerTag-3GFl76 {
-				margin-bottom: 10px;
-				background-image: url(https://raw.githubusercontent.com/byzantine-dev/discord/master/themes/mutual-assets/rectangle.svg);
-
+			.avatar-37jOim rect {
+				display: none;
 			}
 			.headerTagUsernameNoNickname-2-Y5Ct {
 				background-image: var(--name-gradient);
@@ -136,13 +137,10 @@
 				-webkit-background-clip: text;
 			}
 			.headerTagDiscriminatorNoNickname-D-AYUN {
-				color: var(--theme-accent);
+				color: var(--background-primary);
 			}
 			.customStatus-oN4ZZY {
 				color: var(--background-primary);
-			}
-			.base-1x0h_U.muted-3-7c5L {
-				color: var(--theme-accent-username);
 			}
 			.markup-2BOw-j {
 				color: var(--background-primary);
@@ -482,6 +480,12 @@
 	.colorGreen-29iAKY {
 		background-color: var(--theme-accent) !important;
 	}
+	// change popout divider color
+		.divider-ewBQKj {
+			background-color: var(--theme-accent);
+			height: 2px;
+			margin-bottom: 4px;
+		}
 /// Shadows ==================================================
 	// main chat 
 		// main chat window drop shadow 
@@ -876,6 +880,27 @@
 		.buttonContainer-2GVjL_ {
 			margin-top: -8px;
 		}
+	// remove role list padding 
+		.rolesList-1geHY1 {
+			margin-bottom: 4px;
+		}
+	// change padding in popout
+		.body-3HBlXn {
+			padding: 0px 16px 6px;
+		}
+		.headerTop-3vNv-a {
+			padding-bottom: 6px !important;
+			padding-top: 48px;
+		}
+		.aboutMeSection-1Fw5Ia {
+			margin-bottom: 6px;
+		}
+		.customStatus-oN4ZZY {
+			margin-bottom: 6px;
+		}
+		.avatar-37jOim {
+			margin-left: -6px;
+		}
 /// Hidden elements ==================================================
 	// hide titlebar
 		//.titleBar-AC4pGV {
@@ -949,6 +974,19 @@
 		}
 	// hide "this is the start of #channel" text
 		.description-1sDbzZ {
+			display: none;
+		}
+	// hide members in a channel
+		.members-2iaVuN {
+			display: none;
+		}
+	// hide border in channel top
+		.container-3RCQyg {
+			border-color: transparent;
+		}
+	// hide header names in popout
+		.base-1x0h_U.muted-3-7c5L {
+			color: var(--theme-accent-username);
 			display: none;
 		}
 /// search bar/inbox stuff ==================================================
