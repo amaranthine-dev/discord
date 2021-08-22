@@ -1,5 +1,6 @@
 @import "variables.scss";
-///	theme by saturn.		
+
+///	theme by byzantine.		
 
 /// font changes
 	:root {
@@ -71,18 +72,25 @@
 			font-style: italic;
 		}
 	// discord wordmask in top left
+		.wordmark-2iDDfm > svg {
+			width: 0px;
+		}	
 		.wordmark-2iDDfm:after {
-		content: "hakka";
+		content: "hakka \1D307";
 		font-size: 14px;
 		font-weight: 800;
 		position: absolute;
 		top: 6px;
+		width: 120px;
 		padding-left: -2px;
 		font-family: var(--font-primary);
-		width: max-content;
-		color: var(--theme-accent);
-	}
-	.wordmark-2iDDfm > svg {width: 0px;}
+		width: 100px;
+		color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+		filter: saturate(4);
+		background-image: var(--name-gradient);
+		}
 	// bot text fix
 		.botText-1526X_ {
 			font-size: 10px !important;
@@ -115,7 +123,10 @@
 		}
 	// popout
 		.userPopout-xaxa6l[aria-label=byzantine] {
-			background-color: var(--text-normal);
+			//background-color: var(--text-normal);
+			background-color:var(--text-normal);
+			background-image: var(--waves);
+			background-size: 100px 50px;
 			color: var(--background-primary);
 			.avatar-37jOim {
 				margin-top: 6px;
@@ -125,10 +136,26 @@
 				background-image: var(--theme-accent-text);
 				box-shadow: var(--elevation-stroke-inverse);
 			}
+			.popoutBanner-19WKGg {
+				background-color: transparent !important;
+			}
 			.avatar-37jOim rect {
-				display: none;
+				//display: none;
+				fill: white;
+				border: 2px solid white;
+			}
+			.pointerEvents-2zdfdO {
+				mask: none;
 			}
 			.headerTagUsernameNoNickname-2-Y5Ct {
+				background-image: var(--name-gradient);
+				font-weight: 900;
+				color: transparent;
+				filter: saturate(4) brightness(1.5);
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
+			.nickname-3M3Jfa {
 				background-image: var(--name-gradient);
 				font-weight: 900;
 				color: transparent;
@@ -146,7 +173,8 @@
 				color: var(--background-primary);
 			}
 			.bodyInnerWrapper-26fQXj {
-				background-color: var(--text-normal);
+				//background-color: var(--text-normal);
+				background-color: transparent;
 			}
 			.textarea-2r0oV8 {
 				color: var(--background-primary);
@@ -270,7 +298,7 @@
 		.theme-light:root {
 			--spotify-color: var(--spotify-accent) !important;
 		}
-	// make titlebar white 
+	// make titlebar var(--theme-accent-text) 
 		.container-1r6BKw.themed-ANHk51 {
 			background: var(--background-secondary);
 		}
@@ -411,6 +439,9 @@
 			border-top: 0px solid var(--background-modifier-accent);
 			height: 48px !important;
 		}
+		.tabBar-ZmDY9v .item-3HknzM:nth-last-child(1), .tabBody-3YRQ8W:nth-last-child(1) {
+			background-color: var(--theme-accent-brighter);
+		}
 	// emoji complete
 		.autocomplete-1vrmpx {
 			background-color: var(--background-primary) !important;
@@ -466,7 +497,8 @@
 		}*/
 	// change add friend button
 		.tabBar-ZmDY9v .item-3HknzM:nth-last-child(1), .tabBody-3YRQ8W:nth-last-child(1) {
-			background-color: var(--theme-accent) !important;
+			background-color: var(--theme-accent-superbright) !important;
+			color: var(--text-normal) !important;
 		}
 	// change phone online to theme color
 		.cursorDefault-dsQJ1n {
@@ -485,6 +517,30 @@
 			background-color: var(--theme-accent);
 			height: 2px;
 			margin-bottom: 4px;
+		}
+	// change quick switcher text box
+		.input-2VB9rf {
+			background-color: var(--theme-accent-highlight);
+			color: var(--text-normal);
+			box-shadow: var(--elevation-stroke), var(--elevation-medium);
+		}
+		.input-2VB9rf::placeholder {
+			color: var(--text-secondary);
+		}
+		.input-2VB9rf:focus {
+			box-shadow: var(--elevation-stroke), var(--elevation-high);
+		}
+	// change "find or start a convo" text
+		.searchBar-6Kv8R2 .searchBarComponent-32dTOx {
+			color: var(--theme-accent);
+		}
+	// change friends icon
+		.iconWrapper-2OrFZ1 .icon-22AiRD {
+			color: var(--interactive0-normal);
+		}
+	// change friends selected tab text color
+		.side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ, .topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ {
+			color: var(--text-normal);
 		}
 /// Shadows ==================================================
 	// main chat 
@@ -517,12 +573,22 @@
 			.scrollableContainer-2NUZem {
 				box-shadow: var(--elevation-low), var(--elevation-stroke);
 				transition: box-shadow 0.2s ease-in-out;
+				scrollbar-width: none !important;
+			}
+			.scrollableContainer-2NUZem::-webkit-scrollbar {
+				display: none;
+				margin-right: 8px;
+			}
+			.buttons-3JBrkn {
+				right: 4px;
 			}
 			.scrollableContainer-2NUZem:hover {
 				box-shadow: var(--elevation-medium), var(--elevation-stroke);
+				scrollbar-width: none !important;
 			}
 			.scrollableContainer-2NUZem:focus-within {
 				box-shadow: var(--elevation-medium), var(--elevation-stroke);
+				scrollbar-width: none !important;
 			}
 		// reply bar drop shadow 
 			.attachedBars-tZDmyV {
@@ -619,10 +685,18 @@
 		.profileBadges-ohc0Vu {
 			filter: brightness(0.75) saturate(0.4) sepia(.75);
 		}
+		.premiumIcon-1rDbWQ {
+			filter: brightness(0.8) saturate(1) sepia(.75);
+		}
 	// add shadow to role circle on popout
 		.roleCircle-3xAZ1j {
 			box-shadow: var(--elevation-medium);
 			border: .025em solid var(--text-normal);
+		}
+	// change thread shadow color
+		.threadSidebar-1o3BTy {
+			filter: drop-shadow(--elevation-thread) !important;
+			-webkit-filter: drop-shadow(--elevation-thread) !important;
 		}
 /// Size/shape tweaks ==================================================	
 	// nitro banner fix 
@@ -659,7 +733,7 @@
 		}
 	// unread channel pill 
 		.unread-2lAfLh {
-			background: var(--theme-accent);
+			background: var(--theme-accent-text);
 			height: 28px;
 			width: 4px;
 			top: 4px;
@@ -795,11 +869,8 @@
 			color: var(--text-normal);
 		}
 	// right click submenu margin fix
-		.submenuContainer-2gbm7M {
-			left: -8px;
-		}
-		#message-add-reaction, #message-item-0-0-1, #user-context-invite-to-server, #user-context-roles, #channel-context-channel-notifications, #channel-context-mute-channel, #guild-context-mute-guild {
-			left: 8px;
+		.submenuPaddingContainer-fiOCHc {
+			margin-left: -4px;
 		}
 		/*#channel-context-channel-notifications {
 			display: none;
@@ -810,14 +881,24 @@
 		}
 		// divider tweaks
 		.separator-2I32lJ {
-			border-bottom: 2px solid var(--theme-accent-brighter);
+			border-bottom: 1px solid var(--theme-accent-brighter);
 			width: calc(100% + 10px);
 			left: -10px;
 		}
+		// hover text recolor fix
+			.colorDefault-2K3EoJ.focused-3afm-j {
+				color: var(--text-normal);
+			}
+			.interactive:hover {
+				color: var(--text-normal);
+			}
 	// dated divider 
 		.divider-3_HH5L.hasContent-1_DUdQ.divider-JfaTT5.hasContent-1cNJDh {
 		margin-top: 0.25em;
 		margin-bottom: 0.25em;
+		height: 0.05em;
+		background-image: linear-gradient(#00000000, var(--theme-accent-brighter), #00000000);
+		border-top: 0px solid black;
 	}
 	// reply shape tweaks
 		.repliedMessage-VokQwo {
@@ -901,11 +982,11 @@
 		.avatar-37jOim {
 			margin-left: -6px;
 		}
+	// change pfp in message padding 
+		.cozy-3raOZG.wrapper-2a6GCs {
+			padding-left: 64px;
+		}
 /// Hidden elements ==================================================
-	// hide titlebar
-		//.titleBar-AC4pGV {
-		//	display: none;
-		//}
 	// hide small server separator bar 
 		.guildSeparator-33mFX6 {
 			display: none;
@@ -915,6 +996,9 @@
 		} 
 	// hide help button 
 		.iconWrapper-2OrFZ1[aria-label="Help"]>.icon-22AiRD {
+			display: none;
+		}
+		.toolbar-1t6TWx .anchor-3Z-8Bb {
 			display: none;
 		}
 	// hide file button 
@@ -987,6 +1071,10 @@
 	// hide header names in popout
 		.base-1x0h_U.muted-3-7c5L {
 			color: var(--theme-accent-username);
+			display: none;
+		}
+	// hide game stream bar thingy
+		.activityPanel-28dQGo {
 			display: none;
 		}
 /// search bar/inbox stuff ==================================================
@@ -1085,37 +1173,7 @@
 		.nowPlayingColumn-2sl4cE {
 			display: none;
 		}
-/// unused	==================================================
-/*
-	// messages pfp shadow 
-		.avatar-1BDn8e {
-			box-shadow: var(--elevation-low);
-		}
-	// make server folder non transparent
-		.folderIconWrapper-1_bOZe {
-			background-color: transparentize(.3);
-		}
-	// hide status mask
-		.avatar-1BDn8e foreignObject {
-			border-radius: 12px;
-		}
-		.pointerEvents-2zdfdO {
-			rect {
-				mask: url(https://github.com/saturnian-code/discord/blob/a82d296a084bafcf42c32f7b14bb05ba64864e1f/themes/mutual-assets/12px-mask.svg);
-			}
-		}
-		.mask-1l8v16.svg-2V3M55 {
-			rect {
-				mask: url(https://github.com/saturnian-code/discord/blob/a82d296a084bafcf42c32f7b14bb05ba64864e1f/themes/mutual-assets/12px-mask.svg);
-			}
-		}
-		.mask-1l8v16.svg-2V3M55 foreignObject {
-			rect { 
-				mask: url(https://github.com/saturnian-code/discord/blob/a82d296a084bafcf42c32f7b14bb05ba64864e1f/themes/mutual-assets/12px-mask.svg)
-			}
-		}
-*/
-// random snippets that i cant remember
+/// snippets
 	// change edited text to icon
 		.edited-3sfAzf {
 			color: transparent;
@@ -1126,5 +1184,10 @@
 			left: -20px;
 			bottom: 2px;
 		}
-	// move message bar down + fixes needed for that
-	
+/// unused
+/* .submenuContainer-2gbm7M {
+			left: -0px;
+		}
+		#message-add-reaction, #message-item-0-0-1, #user-context-invite-to-server, #user-context-roles, #channel-context-channel-notifications, #channel-context-mute-channel, #guild-context-mute-guild, #user-context-voice-move, #user-context-apps, #user-context-mute-channel {
+			left: 0px;
+		} */

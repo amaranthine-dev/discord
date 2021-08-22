@@ -12,7 +12,7 @@
 		// invite people option
 		--brand-experiment-500: var(--theme-accent);
 		// right click menu clicked on 
-		--brand-experiment-600: var(--theme-accent);
+		--brand-experiment-600: var(--theme-accent-brighter);
 	// Text colors
 		--header-primary: var(--text-normal);
 		--header-secondary: var(--text-secondary);
@@ -46,17 +46,20 @@
 		--theme-accent-highlight: #E2E9E3;
 		--theme-accent-username: #326743;
 		--theme-accent-text: #292e29;
-		--theme-accent-superdark: #1D201D;
+		--theme-accent-superdark: #181B18;
 		--theme-accent-difference: #9B6F8D;
 		--name-gradient: linear-gradient(315deg, #987B65, #866860, #76585D, #664B5A, #4E3B52);
 	// elevation shadows
 		--elevation-stroke: 0 0 0 1px rgba(6,6,7,0.08);
+		--elevation-stroke-text: 0 0 2px rgba(6,6,7,0.2) !important;
 		--elevation-stroke-strong: 0 0 0 1px rgba(6,6,7,0.16);
-		--elevation-stroke-inverse: 0 0 2px 2px rgba(254,254,255,0.16);
+		--elevation-stroke-inverse: 0 0 1px 2px rgba(254,254,255,0.16);
 		--elevation-low: 0 1px 0 rgba(6,6,7,0.1),0 1.5px 0 rgba(6,6,7,0.025),0 2px 0 rgba(6,6,7,0.025);
 		--elevation-medium: 0 4px 4px rgba(0,0,0,0.08);
 		--elevation-high: 0 8px 16px rgba(0,0,0,0.16);
 		--guild-header-text-shadow: var(--elevation-high);
+		--elevation-thread-box: 0px 8px 40px rgba(6, 6, 7, 0.32);
+		--elevation-thread: rgba(6, 6, 7, 0.32) 0px 8px 40px;
 	// Right click menu
 		--background-floating: var(--background-secondary);
 		--background-mobile-primary: var(--background-primary);
@@ -88,89 +91,11 @@
 		--reply-spacing: 2px !important;
 	}
 .theme-dark {
-	// logo
-	--logo-primary: var(--theme-accent);
-	--focus-primary: var(--theme-accent);
-// blurple, hover, and foreground
-	--brand-experiment: var(--theme-accent-brighter);
-	--brand-experiment-560: var(--theme-accent-superbright);
-	--control-brand-foreground: var(--theme-accent-brighter);
-	// mention text / bg color
-	--brand-experiment-530: var(--text-normal);
-	--brand-experiment-15a: var(--theme-accent-superbright);
-	// invite people option
-	--brand-experiment-500: var(--theme-accent);
-	// right click menu clicked on 
-	--brand-experiment-600: var(--theme-accent);
-// Text colors
-	--header-primary: var(--text-normal);
-	--header-secondary: var(--text-secondary);
-	--text-normal: #1D201D;
-	--text-secondary: var(--theme-accent);
-	--text-muted: #949E94;
-	--divider-color: var(--theme-accent-brighter) !important;
-	--text-positive: var(--theme-accent);
-// Hyperlink colorcontent: none;
-	--text-link: #CE8D64;
-	--channels-default: #292E29;
-	--interactive-normal: var(--theme-accent);
-	--interactive-hover: var(--theme-accent);
-	--interactive-active: var(--theme-accent-highlight);
-	--interactive-muted: #949E94;
-// Text background color
+	// Text background color
 	--background-primary: var(--theme-main);
-// Channel background
+	// Channel background
 	--background-secondary: var(--theme-main);
 	--background-secondary-alt: var(--theme-main);
-// Discord top bar and channel background
-	--background-tertiary: var(--theme-main);
-// powercord card background
-	--deprecated-card-bg: var(theme-main);
-// theme color accents
-	--theme-main: #F9F1EC;
-	--theme-accent: #5C946E;
-	--theme-accent-brighter: #80C2AF;
-	--theme-accent-superbright: #BDDACE;
-	--theme-accent-highlight: #E2E9E3;
-	--theme-accent-username: #326743;
-	--theme-accent-text: #292e29;
-	--theme-accent-superdark: #1D201D;
-// elevation shadows
-	--elevation-stroke: 0 0 0 1px rgba(6,6,7,0.08);
-	--elevation-stroke-strong: 0 0 0 1px rgba(6,6,7,0.16);
-	--elevation-low: 0 1px 0 rgba(6,6,7,0.1),0 1.5px 0 rgba(6,6,7,0.025),0 2px 0 rgba(6,6,7,0.025);
-	--elevation-medium: 0 4px 4px rgba(0,0,0,0.08);
-	--elevation-high: 0 8px 16px rgba(0,0,0,0.16);
-	--guild-header-text-shadow: var(--elevation-high);
-// Right click menu
-	--background-floating: var(--background-secondary);
-	--background-mobile-primary: var(--background-primary);
-	--background-mobile-secondary: #e0e0e0;
-// Channel hover
-	--background-modifier-hover: var(--theme-accent-superbright);
-	--background-modifier-active: var(--background-modifier-accent);
-// Selected channel
-	--background-modifier-selected: var(--background-modifier-accent);
-	--background-modifier-accent: var(--theme-accent-superbright);
-	// mentioned
-	--background-mentioned: var(--theme-accent-highlight);
-	--background-mentioned-hover: var(--theme-accent-highlight);
-// Message hover color
-	--background-message-hover: transparent;
-// Message box
-	--channeltextarea-background: var(--background-secondary);
-	--activity-card-background: #c7c7c7;
-	--textbox-markdown-syntax: var(--theme-accent);
-// spotify color
-	--spotify-accent: var(--theme-accent-brighter);
-// reply variables
-	--mentioned-border: var(--theme-accent);
-	--mentioned-bg: var(--background-mentioned);
-	--mentioned-bg-hover: var(--background-mentioned-hover);
-	--replying-border: var(--theme-accent);
-	--replying-bg: rgba(114, 137, 218, 0.05);
-	--replying-bg-hover: var(--theme-accent);
-	--reply-spacing: 2px !important;
 }
 // sass variables (WIP
 /*
@@ -211,5 +136,12 @@
 	--rs-phone-visible: none !important;
 }
 :root {
-	--elevation-stroke-text: 0 0 2px rgba(6,6,7,0.2) !important;
+
+/*#region*/ // wave pattern
+	--waves: radial-gradient(circle at 100% 150%, var(--text-normal) 24%, var(--theme-accent-superdark) 24%, var(--theme-accent-superdark) 28%, var(--text-normal) 28%, var(--text-normal) 36%, var(--theme-accent-superdark) 36%, var(--theme-accent-superdark) 40%, transparent 40%, transparent),
+	radial-gradient(circle at 0    150%, var(--text-normal) 24%, var(--theme-accent-superdark) 24%, var(--theme-accent-superdark) 28%, var(--text-normal) 28%, var(--text-normal) 36%, var(--theme-accent-superdark) 36%, var(--theme-accent-superdark) 40%, transparent 40%, transparent),
+	radial-gradient(circle at 50%  100%, var(--theme-accent-superdark) 10%, var(--text-normal) 10%, var(--text-normal) 23%, var(--theme-accent-superdark) 23%, var(--theme-accent-superdark) 30%, var(--text-normal) 30%, var(--text-normal) 43%, var(--theme-accent-superdark) 43%, var(--theme-accent-superdark) 50%, var(--text-normal) 50%, var(--text-normal) 63%, var(--theme-accent-superdark) 63%, var(--theme-accent-superdark) 71%, transparent 71%, transparent),
+	radial-gradient(circle at 100% 50%, var(--theme-accent-superdark) 5%, var(--text-normal) 5%, var(--text-normal) 15%, var(--theme-accent-superdark) 15%, var(--theme-accent-superdark) 20%, var(--text-normal) 20%, var(--text-normal) 29%, var(--theme-accent-superdark) 29%, var(--theme-accent-superdark) 34%, var(--text-normal) 34%, var(--text-normal) 44%, var(--theme-accent-superdark) 44%, var(--theme-accent-superdark) 49%, transparent 49%, transparent),
+	radial-gradient(circle at 0    50%, var(--theme-accent-superdark) 5%, var(--text-normal) 5%, var(--text-normal) 15%, var(--theme-accent-superdark) 15%, var(--theme-accent-superdark) 20%, var(--text-normal) 20%, var(--text-normal) 29%, var(--theme-accent-superdark) 29%, var(--theme-accent-superdark) 34%, var(--text-normal) 34%, var(--text-normal) 44%, var(--theme-accent-superdark) 44%, var(--theme-accent-superdark) 49%, transparent 49%, transparent);
+	/*#endregion*/
 }
