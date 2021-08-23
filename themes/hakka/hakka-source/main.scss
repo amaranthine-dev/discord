@@ -124,8 +124,8 @@
 	// popout
 		.userPopout-xaxa6l[aria-label=byzantine] {
 			//background-color: var(--text-normal);
-			background-color:var(--text-normal);
-			background-image: var(--waves);
+			//background-image: var(--waves);
+			background-color: var(--theme-accent-highlight);
 			background-size: 100px 50px;
 			color: var(--background-primary);
 			.avatar-37jOim {
@@ -135,6 +135,7 @@
 				background-color: transparent;
 				background-image: var(--theme-accent-text);
 				box-shadow: var(--elevation-stroke-inverse);
+				//visibility: hidden;
 			}
 			.popoutBanner-19WKGg {
 				background-color: transparent !important;
@@ -143,9 +144,6 @@
 				//display: none;
 				fill: white;
 				border: 2px solid white;
-			}
-			.pointerEvents-2zdfdO {
-				mask: none;
 			}
 			.headerTagUsernameNoNickname-2-Y5Ct {
 				background-image: var(--name-gradient);
@@ -163,30 +161,24 @@
 				background-clip: text;
 				-webkit-background-clip: text;
 			}
-			.headerTagDiscriminatorNoNickname-D-AYUN {
-				color: var(--background-primary);
-			}
-			.customStatus-oN4ZZY {
-				color: var(--background-primary);
-			}
-			.markup-2BOw-j {
-				color: var(--background-primary);
+			.headerTagDiscriminatorNoNickname-D-AYUN, .customStatus-oN4ZZY, .markup-2BOw-j, .textarea-2r0oV8 {
+				//color: var(--background-primary);
+				color: var(--text-normal);
 			}
 			.bodyInnerWrapper-26fQXj {
 				//background-color: var(--text-normal);
-				background-color: transparent;
-			}
-			.textarea-2r0oV8 {
-				color: var(--background-primary);
+				background-color: var(--theme-primary) !important;
 			}
 			.textarea-2r0oV8:focus {
-				color: var(--background-primary) !important;
-				background-color: var(--theme-accent-text);
+				color: var(--text-normal) !important;
+				background-color: var(--theme-accent-highlight);
 			}
 			.role-2irmRk {
-				color: var(--background-primary);
+				//color: var(--background-primary);
+				//background-color: var(--theme-accent-text);
+				color: var(--text-normal);
+				background-color: transparent;
 				border-color: var(--theme-accent-username) !important;
-				background-color: var(--theme-accent-text);
 			}
 		}
 /// Color ==================================================
