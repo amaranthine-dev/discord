@@ -135,8 +135,21 @@
 	--rs-phone-color: var(--rs-online-color);
 	--rs-phone-visible: none !important;
 }
+.theme-dark {
+	--text-normal: #F9F1EC;
+	--text-link: #CE8D64;
+	--theme-main: #1D201D;
+	--theme-accent: #5C946E;
+	--theme-accent-brighter: #BDDACE;
+	--theme-accent-superbright: #80C2AF;
+	--theme-accent-highlight: #343a34;
+	--theme-accent-username: #E2E9E3;
+	--theme-accent-text: #E2E9E3;
+	--theme-accent-superdark: #181B18;
+	--theme-accent-difference: #9B6F8D;
+	--name-gradient: linear-gradient(315deg, #987B65, #866860, #76585D, #664B5A, #4E3B52);
+}
 :root {
-
 /*#region*/ // wave pattern
 	--waves: radial-gradient(circle at 100% 150%, var(--text-normal) 24%, var(--theme-accent-superdark) 24%, var(--theme-accent-superdark) 28%, var(--text-normal) 28%, var(--text-normal) 36%, var(--theme-accent-superdark) 36%, var(--theme-accent-superdark) 40%, transparent 40%, transparent),
 	radial-gradient(circle at 0    150%, var(--text-normal) 24%, var(--theme-accent-superdark) 24%, var(--theme-accent-superdark) 28%, var(--text-normal) 28%, var(--text-normal) 36%, var(--theme-accent-superdark) 36%, var(--theme-accent-superdark) 40%, transparent 40%, transparent),
